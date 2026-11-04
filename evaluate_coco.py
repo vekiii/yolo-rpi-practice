@@ -52,7 +52,7 @@ def main():
         raise ValueError('Model classes must match the 80 COCO detection classes')
     class_to_category = {int(k): categories[v] for k, v in names.items()}
     predict_options = dict(device='cpu', imgsz=args.imgsz, rect=False,
-                           half=False, conf=0.001, iou=0.7, max_det=100,
+                           conf=0.001, iou=0.7, max_det=100,
                            verbose=False, save=False)
     print(f'Warming up: {args.warmup} passes (excluded from timing)')
     for _ in range(args.warmup):
@@ -97,7 +97,7 @@ def main():
     print(capture.getvalue())
     stats = evaluator.stats
     summary = {
-        'model': args.model, 'device': 'cpu', 'half': False,
+        'model': args.model, 'device': 'cpu', 
         'image_count': len(image_ids), 'image_ids': image_ids,
         'selection': 'ascending COCO image ID; first N',
         'images': str(args.images.resolve()), 'annotations': str(args.annotations.resolve()),
