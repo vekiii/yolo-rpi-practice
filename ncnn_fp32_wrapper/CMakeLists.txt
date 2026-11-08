@@ -1,5 +1,13 @@
 cmake_minimum_required(VERSION 3.24)
 project(yolo_ncnn LANGUAGES C CXX)
+
+if(MSVC)
+    set(CMAKE_MSVC_RUNTIME_LIBRARY
+        "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+    set(BUILD_WITH_STATIC_CRT OFF CACHE BOOL "" FORCE)
+    set(NCNN_BUILD_WITH_STATIC_CRT OFF CACHE BOOL "" FORCE)
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(FetchContent)
@@ -31,3 +39,7 @@ FetchContent_MakeAvailable(json)
 add_executable(yolo_ncnn main.cpp)
 target_include_directories(yolo_ncnn PRIVATE ${opencv_SOURCE_DIR}/modules/core/include ${opencv_SOURCE_DIR}/modules/imgproc/include ${opencv_SOURCE_DIR}/modules/imgcodecs/include ${opencv_BINARY_DIR})
 target_link_libraries(yolo_ncnn PRIVATE ncnn opencv_core opencv_imgproc opencv_imgcodecs nlohmann_json::nlohmann_json)
+target_include_directories(yolo_ncnn PRIVATE
+    "${CMAKE_BINARY_DIR}"
+    "${opencv_BINARY_DIR}"
+)
