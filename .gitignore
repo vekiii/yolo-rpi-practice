@@ -6,4 +6,3 @@ runs/
 *.pt
 *.docx
 results/
-ncnn_fp32_wrapper/build/
