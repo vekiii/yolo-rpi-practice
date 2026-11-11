@@ -1,3 +1,3 @@
 {
-    "cmake.sourceDirectory": "D:/yolo_test/ncnn_fp32_wrapper"
+    "cmake.sourceDirectory": "D:/yolo_test/tflite_cpp_wrapper"
 }
