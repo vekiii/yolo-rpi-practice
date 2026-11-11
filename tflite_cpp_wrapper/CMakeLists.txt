@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.24)
 project(yolo_tflite LANGUAGES C CXX)
+if(MSVC)
+    set(CMAKE_MSVC_RUNTIME_LIBRARY
+        "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+    set(BUILD_WITH_STATIC_CRT OFF CACHE BOOL
+        "Use dynamic MSVC runtime for OpenCV" FORCE)
+endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(FetchContent)
@@ -12,6 +18,12 @@ set(TFLITE_ENABLE_EXTERNAL_DELEGATE OFF CACHE BOOL "" FORCE)
 set(TFLITE_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
 FetchContent_Declare(tensorflow GIT_REPOSITORY https://github.com/tensorflow/tensorflow.git GIT_TAG v2.20.0 GIT_SHALLOW TRUE SOURCE_SUBDIR tensorflow/lite)
 FetchContent_MakeAvailable(tensorflow)
+target_compile_definitions(tensorflow-lite PUBLIC
+    TF_MAJOR_VERSION=2
+    TF_MINOR_VERSION=20
+    TF_PATCH_VERSION=0
+    "TF_VERSION_SUFFIX=\"\""
+)
 set(BUILD_LIST core,imgproc,imgcodecs CACHE STRING "" FORCE)
 set(BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(BUILD_PERF_TESTS OFF CACHE BOOL "" FORCE)
@@ -30,7 +42,13 @@ FetchContent_MakeAvailable(opencv)
 FetchContent_Declare(json GIT_REPOSITORY https://github.com/nlohmann/json.git GIT_TAG v3.11.3 GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(json)
 add_executable(yolo_tflite main.cpp)
-target_include_directories(yolo_tflite PRIVATE ${opencv_SOURCE_DIR}/modules/core/include ${opencv_SOURCE_DIR}/modules/imgproc/include ${opencv_SOURCE_DIR}/modules/imgcodecs/include ${opencv_BINARY_DIR})
+target_include_directories(yolo_tflite PRIVATE
+    ${opencv_SOURCE_DIR}/modules/core/include
+    ${opencv_SOURCE_DIR}/modules/imgproc/include
+    ${opencv_SOURCE_DIR}/modules/imgcodecs/include
+    ${opencv_BINARY_DIR}
+    ${CMAKE_BINARY_DIR}
+)
 target_link_libraries(yolo_tflite PRIVATE tensorflow-lite opencv_core opencv_imgproc opencv_imgcodecs nlohmann_json::nlohmann_json)
 
 set_target_properties(yolo_tflite PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
