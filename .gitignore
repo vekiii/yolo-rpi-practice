@@ -6,3 +6,5 @@ runs/
 *.pt
 *.docx
 results/
+rpi_test_50.tar.gz
+val2017.tar
