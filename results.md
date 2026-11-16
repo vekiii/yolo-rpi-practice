@@ -1,6 +1,6 @@
-# Rezultati testova
+﻿# Rezultati testova
 
-Sastavljeno 09.11.2026, ažurirano 13.11.2026. iz sačuvanih lokalnih JSON fajlova, uključujući Raspberry Pi FP32 rezultate i laptop evaluaciju modela sa FP16 težinama na 50 slika. Razvojni koraci i ranije poreklo dokaza: [evidance.md](evidance.md). Aktivni runtime je TFLite C++ sa XNNPACK backendom; NCNN rezultati ostaju istorijska referenca. Testovi nisu ponovo pokretani za potrebe dokumentovanja.
+Ažurirano 16.11.2026. iz JSON fajlova. NCNN merenja su uklonjena. Statistike ispod koriste pojedinačne timing zapise za preprocess, inference i postprocess; standardna devijacija je uzorka (n−1), u ms.
 
 ## Pregled po redosledu sačuvanih rezultata
 
@@ -10,8 +10,6 @@ Datumi i vremena označavaju lokalno prikazano vreme poslednje izmene izveštaja
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | 1. Python/PyTorch | 04.11.2026. 12:47:42 | 50 | 8 | 0.410425851 | 0.552407994 | 0.453770563 | 107.942174 | 130.867954 |
 | 2. Python/PyTorch FP32 baseline | 04.11.2026. 14:36:26 | 5000 | 8 | 0.365719332 | 0.513690330 | 0.397506553 | 124.917075 | 152.878522 |
-| 3. C++/NCNN FP32 | 08.11.2026. 20:47:47 | 50 | 4 | 0.410425851 | 0.552407994 | 0.453770563 | 122.462036 | 156.249160 |
-| 4. C++/NCNN FP32 | 08.11.2026. 21:10:03 | 5000 | 4 | 0.365711804 | 0.513711233 | 0.397510626 | 117.466344 | 150.435963 |
 | 5. C++/TFLite FP32 + XNNPACK | 11.11.2026. 18:09:14 | 50 | 4 | 0.410425851 | 0.552407994 | 0.453770563 | 85.431748 | 95.221360 |
 | 6. C++/TFLite FP32 + XNNPACK | 11.11.2026. 18:23:31 | 5000 | 4 | 0.365711977 | 0.513711181 | 0.397511274 | 115.516409 | 131.939457 |
 | 7. RPi C++/TFLite FP32 + XNNPACK | 12.11.2026. 14:40:47 | 50 | 4 | 0.410425851 | 0.552407994 | 0.453770563 | 420.947902 | 442.650930 |
@@ -20,7 +18,7 @@ Datumi i vremena označavaju lokalno prikazano vreme poslednje izmene izveštaja
 | 10. Laptop C++/TFLite FP16 težine + XNNPACK | 13.11.2026. 14:41:03 | 5000 | 4 | 0.365739231 | 0.513939614 | 0.397913472 | 102.745131 | 116.238675 |
 | 11. RPi C++/TFLite FP16 težine + XNNPACK | 13.11.2026. 15:28:05 | 5000 | 4 | 0.365741991 | 0.513939253 | 0.397913689 | 440.392685 | 463.385106 |
 
-Zajednički parametri: YOLOv8n, CPU, COCO val2017, deterministički izbor po rastućem ID-u, 640×640, batch 1, `conf=0.001`, NMS IoU 0.7, najviše 100 detekcija, pet warmup prolaza isključenih iz merenja. Provereno je da Python, NCNN i TFLite koriste iste ID-eve istim redosledom za odgovarajuću veličinu testa. TFLite testovi su završeni: postoje i timing i COCO metrics izveštaji.
+Zajednički parametri: YOLOv8n, CPU, COCO val2017, deterministički izbor po rastućem ID-u, 640×640, batch 1, `conf=0.001`, NMS IoU 0.7, najviše 100 detekcija, pet warmup prolaza isključenih iz merenja. Provereno je da Python i TFLite koriste iste ID-eve istim redosledom za odgovarajuću veličinu testa. TFLite testovi su završeni: postoje i timing i COCO metrics izveštaji.
 
 NCNN izvori i model uklonjeni su u commitu `a6cd793`; dostupni su u Git istoriji. NCNN timing i metrics fajlovi i dalje postoje, dok pripadajući predictions fajlovi trenutno nisu prisutni.
 
@@ -96,7 +94,7 @@ Izvori: [timing](results/tflite_fp32_50_timing.json), [COCO metrike](results/tfl
 | Postprocesiranje | 1.031012 |
 | Ukupna obrada | 95.221360 |
 
-Timing sadrži 50 zapisa; proseci su provereni prema `per_image`. Tri glavne AP metrike jednake su Python i NCNN rezultatu na 50 slika na sačuvanoj preciznosti. To podržava ispravnost konverzije i dekodiranja, ali ne dokazuje identičnost svih detekcija. Zbir merenih ukupnih obrada iznosi 4761.068 ms.
+Timing sadrži 50 zapisa; proseci su provereni prema `per_image`. Tri glavne AP metrike jednake su Python rezultatu na 50 slika na sačuvanoj preciznosti. To podržava ispravnost konverzije i dekodiranja, ali ne dokazuje identičnost svih detekcija. Zbir merenih ukupnih obrada iznosi 4761.068 ms.
 
 ## 6. C++/TFLite FP32 + XNNPACK — 5000 slika
 
@@ -278,39 +276,9 @@ FP16 težina prolaz ima 3.43% više inference vremena i 3.50% više ukupnog vrem
 
 Sa FP32 težinama, RPi inference vreme je **3.69 puta veće**, a ukupno vreme obrade **3.39 puta veće** od laptop prolaza. Sa FP16 težinama, RPi inference je **4.29 puta veći**, a ukupno vreme **3.98 puta veće** od laptop prolaza. mAP rezultati su vrlo bliski, ali nisu bitno identični. Poređenje menja hardver i uslove izvršavanja.
 
-## Poređenje laptop TFLite, NCNN i Python rezultata na 5000 slika
-
-| Metrika | Python/PyTorch | C++/NCNN (istorijski) | C++/TFLite + XNNPACK |
-|---|---:|---:|---:|
-| CPU niti | 8 | 4 | 4 |
-| mAP50–95 | 0.365719332 | 0.365711804 | 0.365711977 |
-| mAP50 | 0.513690330 | 0.513711233 | 0.513711181 |
-| mAP75 | 0.397506553 | 0.397510626 | 0.397511274 |
-| Inference, ms/slika | 124.917075 | 117.466344 | 115.516409 |
-| Predict / ukupno, ms/slika | 152.878522 | 150.435963 | 131.939457 |
-| Učitavanje, ms/slika | Nije izdvojeno | 24.913897 | 10.410996 |
-
-TFLite inference ima približno **7.53% manje prosečno vreme od Python baseline-a** i **1.66% manje od NCNN-a** u ovim prolazima. Razlika mAP50–95 prema Python-u iznosi približno −0.00000735552918125, odnosno −0.000736 procentnih poena.
-
-Razlika ukupne obrade ne potiče samo od inference-a: učitavanje je 10.41 ms u TFLite testu naspram 24.91 ms u NCNN testu. Uzrok te razlike nije zabeležen; bez kontrole uslova ne može se pripisati runtime-u. TFLite inference na 5000 slika je 115.52 ms, a na 50 slika 85.43 ms; ova dva prolaza nisu nezavisna ponavljanja istog testa i ne daju procenu stabilnosti performansi.
-
-## Istorijsko poređenje NCNN-a sa Python-om na 5000 istih slika
-
-| Metrika | Python/PyTorch | C++/NCNN | Razlika C++ − Python |
-|---|---:|---:|---:|
-| mAP50–95 | 0.3657193322553305 | 0.3657118042028542 | −0.0000075280524763 |
-| mAP50 | 0.5136903303753626 | 0.5137112326245359 | +0.0000209022491733 |
-| mAP75 | 0.3975065525507988 | 0.3975106255931308 | +0.0000040730423320 |
-| Inference, ms/slika | 124.917075 | 117.466344 | −7.450731 |
-| Predict / ukupno, ms/slika | 152.878522 | 150.435963 | −2.442559 |
-
-NCNN inference ima približno 5.96% manje prosečno vreme, a ukupna obrada približno 1.60% manje vreme u odnosu na Python `predict` poziv u ovim sačuvanim prolazima. Tačnost je vrlo bliska: razlika mAP50–95 iznosi oko −0.000753 procentna poena.
-
-Ovo poređenje opisuje konkretna merenja sa različitim runtime-ovima i brojem niti (Python 8, NCNN 4). Ne izoluje efekat programskog jezika i ne potvrđuje ponovljivo ubrzanje.
-
 ## Dodatne COCO metrike
 
-Za Python su ove vrednosti preuzete iz tekstualnog `coco_summary` i zato imaju samo tri decimale. NCNN i TFLite vrednosti su radi prikaza zaokružene na isti broj decimala; pune vrednosti su u `all_coco_stats`.
+Za Python su ove vrednosti preuzete iz tekstualnog `coco_summary` i zato imaju samo tri decimale. TFLite vrednosti su radi prikaza zaokružene na isti broj decimala; pune vrednosti su u `all_coco_stats`.
 
 | Metrika | Python 50 | Python 5000 | NCNN 50 | NCNN 5000 | TFLite 50 | TFLite 5000 |
 |---|---:|---:|---:|---:|---:|---:|
@@ -340,10 +308,37 @@ Nove RPi metrike su takođe zaokružene na tri decimale; pune vrednosti su u odg
 
 ## Značenje vremena i ograničenja
 
+## Statistika vremena po slici
+
+Vrednosti su izračunate iz svakog run-a i prikazane u ms. `Mean` je aritmetička sredina, `std` uzoračka standardna devijacija (`n−1`), a min/max su najniža i najviša vrednost. U tabeli su date samo preprocess, inference i postprocess faze; nema učitavanja ni ukupnog vremena.
+
+| Run | Faza | Mean | Median | Std | Min | Max |
+|---|---|---:|---:|---:|---:|---:|
+| Laptop FP32, 5000 | Preprocess | 4.343535 | 4.224400 | 1.375500 | 1.897700 | 39.564400 |
+| Laptop FP32, 5000 | Inference | 115.516409 | 113.528300 | 19.704939 | 69.402700 | 336.510400 |
+| Laptop FP32, 5000 | Postprocess | 1.667835 | 1.674600 | 0.549350 | 0.605200 | 18.871200 |
+| Laptop FP16 weights, 5000 | Preprocess | 4.064151 | 3.863350 | 1.444324 | 1.727200 | 53.140100 |
+| Laptop FP16 weights, 5000 | Inference | 102.745131 | 97.100350 | 19.221173 | 61.334400 | 385.967000 |
+| Laptop FP16 weights, 5000 | Postprocess | 1.499472 | 1.440100 | 0.321640 | 0.547700 | 7.622800 |
+| RPi FP32, 5000 | Preprocess | 8.312392 | 8.147997 | 0.531358 | 6.929957 | 10.797741 |
+| RPi FP32, 5000 | Inference | 425.772376 | 425.561561 | 3.001331 | 420.287201 | 525.867355 |
+| RPi FP32, 5000 | Postprocess | 5.482990 | 5.452058 | 0.152634 | 5.272367 | 7.219903 |
+| RPi FP16 weights, 5000 | Preprocess | 8.202460 | 8.023194 | 0.557028 | 6.840084 | 14.296861 |
+| RPi FP16 weights, 5000 | Inference | 440.392685 | 440.229800 | 1.744963 | 433.021123 | 462.672541 |
+| RPi FP16 weights, 5000 | Postprocess | 5.523155 | 5.494257 | 0.144905 | 5.318276 | 6.721144 |
+
+### Šta znače faze i koje vreme je prikazano
+
+**Preprocess** priprema ulaznu sliku za mrežu: letterbox/resize na 640×640, padding, BGR u RGB i normalizacija podelom sa 255, uz upis u ulazni tenzor. **Inference** je izvršavanje modela (`Invoke()` u TFLite wrapperu). **Postprocess** obrađuje izlaz mreže: bira klase i skorove, filtrira pragom pouzdanosti, radi class-aware NMS i vraća/ograničava kutije na dimenzije originalne slike.
+
+Statistika iznad zasebno računa sve tri faze iz odgovarajućih `per_image` uzoraka. Dakle inference statistika koristi samo `inference_ms`; preprocess i postprocess su prikazani odvojeno. Ne koristi `total_ms`, niti meša tri faze u jednu vrednost. Python baseline nema sačuvana pojedinačna `preprocess_ms` i `postprocess_ms` polja u istom formatu, pa izostavljen je iz fazne tabele.
+
 - Python: `timing_ms.mean_by_stage` sadrži Ultralytics vremena faza. `mean_predict_call` obuhvata učitavanje slike i bibliotečki overhead; ne obuhvata izvoz JSON-a, COCO evaluaciju i ispis napretka. Zbir vremena faza zato nije jednak vremenu celog poziva.
 - C++: `means.total_ms` obuhvata učitavanje, pretprocesiranje, inference i postprocesiranje. NCNN inference obuhvata i kreiranje extractora, dok TFLite inference meri `Invoke()` već pripremljenog interpretera. JSON sklapanje/serijalizacija, ispis i COCO evaluacija nisu uključeni. Ukupno se meri zasebno od pojedinačnih faza.
 - TFLite: učitavanje modela, kreiranje interpretera/delegata i alokacija tenzora nisu uključeni. XNNPACK je eksplicitno uključen, ali nema izveštaja koji potvrđuje da su svi operatori delegirani. Nema sačuvanog testa sa `builtin` backendom.
-- Oba NCNN testa beleže NCNN tag `20250503`, `precision="FP32 weights and compute"`, četiri niti i pet warmup prolaza.
+- 
 - Za prvi pojedinačni test postoji sačuvana slika, ali nema numeričkog izveštaja. Vizualizacija 50 slika takođe nema zaseban benchmark. Do 13.11.2026. pronađeno je jedanaest numeričkih testova, uključujući RPi FP32 i FP16 težina testove na 5000 slika i laptop FP16 težina testove na 50 i 5000 slika. Nisu pronađeni INT8 rezultati ili RAM merenja.
 - Pri ažuriranju ponovo su provereni svi C++ timing JSON fajlovi: broj zapisa, redosled ID-eva i proseci prema `per_image`. Za nove RPi predictions fajlove proverena je pripadnost ID-eva manifestu. COCO metrike su preuzete iz sačuvanih metrics JSON fajlova; COCO evaluacija nije ponovo izvršavana.
 - Nema sačuvanih nezavisnih ponavljanja iz kojih bi se procenila varijabilnost proseka. Vrednosti su dokumentacija postojećih prolaza.
+
+
