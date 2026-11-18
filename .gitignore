@@ -8,3 +8,6 @@ runs/
 results/
 rpi_test_50.tar.gz
 val2017.tar
+/calibration/coco_train2017_500_seed42/images/
+/calibration/coco_train2017_500_seed42/*.part
+/calibration/coco_train2017_500_seed42/preview_first50.png
