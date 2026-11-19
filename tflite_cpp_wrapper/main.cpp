@@ -1,6 +1,7 @@
 #include <tensorflow/lite/interpreter.h>
 #include <tensorflow/lite/kernels/register.h>
 #include <tensorflow/lite/model_builder.h>
+#include <tensorflow/lite/schema/schema_generated.h>
 #include <tensorflow/lite/delegates/xnnpack/xnnpack_delegate.h>
 #include <tensorflow/lite/version.h>
 #include <opencv2/core.hpp>
@@ -13,6 +14,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <map>
 #include <memory>
 #include <random>
 #include <stdexcept>
@@ -67,6 +69,23 @@ static std::vector<Detection> decode(const float* data,bool features_first,bool 
  return keep;
 }
 static std::vector<int> shape(const TfLiteTensor*t){return {t->dims->data,t->dims->data+t->dims->size};}
+static json precision_metadata(const tflite::Model& graph, const TfLiteTensor& input,
+                               const TfLiteTensor& output) {
+ std::map<std::string, size_t> tensor_counts;
+ for (const auto* subgraph : *graph.subgraphs()) {
+  if (!subgraph->tensors()) continue;
+  for (const auto* tensor : *subgraph->tensors()) {
+   const char* name = tflite::EnumNameTensorType(tensor->type());
+   ++tensor_counts[*name ? name : "UNKNOWN_" + std::to_string(static_cast<int>(tensor->type()))];
+  }
+ }
+ return {
+  {"input_dtype", TfLiteTypeGetName(input.type)},
+  {"output_dtype", TfLiteTypeGetName(output.type)},
+  {"graph_tensor_counts_by_type", tensor_counts},
+  {"runtime_kernel_precision", {{"status", "not_profiled"}}}
+ };
+}
 static void check(TfLiteStatus s,const char* message){if(s!=kTfLiteOk)throw std::runtime_error(message);}
 struct Stats {double mean,median,std,min,max;};
 static Stats stats(std::vector<double> v){
@@ -101,7 +120,7 @@ int main(int argc,char**argv){try{
   std::cout<<"Benchmark image_id="<<item.at("id")<<" ("<<filename<<"), warmup="<<warmup<<", iterations="<<iterations<<"\n";
   for(int i=0;i<iterations;i++){auto whole=Clock::now();auto stage=Clock::now();prepare(img,interpreter->typed_input_tensor<float>(0),nhwc,ratio,left,top);auto infer_start=Clock::now();check(interpreter->Invoke(),"Inference failed");auto post_start=Clock::now();auto dets=decode(interpreter->typed_output_tensor<float>(0),features_first,units=="normalized",ratio,left,top,img.cols,img.rows);auto end=Clock::now();(void)dets;pre.push_back(std::chrono::duration<double,std::milli>(infer_start-stage).count());infer.push_back(std::chrono::duration<double,std::milli>(post_start-infer_start).count());post.push_back(std::chrono::duration<double,std::milli>(end-post_start).count());total.push_back(std::chrono::duration<double,std::milli>(end-whole).count());if((i+1)%100==0||i+1==iterations)std::cout<<"Measured "<<(i+1)<<"/"<<iterations<<" iterations\n";}
   json samples=json::array();for(int i=0;i<iterations;i++)samples.push_back({{"iteration",i+1},{"preprocess_ms",pre[i]},{"inference_ms",infer[i]},{"postprocess_ms",post[i]},{"total_ms",total[i]}});
-  if(prefix.has_parent_path())fs::create_directories(prefix.parent_path());json summary={{"mode","single_image_benchmark"},{"runtime","TFLite C++ Interpreter API"},{"runtime_version",TFLITE_VERSION_STRING},{"backend",backend},{"model",model_path.string()},{"model_bytes",fs::file_size(model_path)},{"image_id",item.at("id")},{"image_file_name",filename},{"seed",actual_seed},{"seed_used",explicit_image?json(nullptr):json(seed)},{"warmup_iterations",warmup},{"measured_iterations",iterations},{"threads",threads},{"time_unit","ms"},{"std_definition","population (N divisor)"},{"input_shape",is},{"output_shape",os},{"box_units",units},{"precision","FP32 operation I/O; model constants may be FP16"},{"statistics",{{"preprocess_ms",statsJson(pre)},{"inference_ms",statsJson(infer)},{"postprocess_ms",statsJson(post)},{"total_ms",statsJson(total)}}},{"warmup_sample",warmup_times},{"per_iteration",samples}};
+  if(prefix.has_parent_path())fs::create_directories(prefix.parent_path());json summary={{"mode","single_image_benchmark"},{"runtime","TFLite C++ Interpreter API"},{"runtime_version",TFLITE_VERSION_STRING},{"backend",backend},{"model",model_path.string()},{"model_bytes",fs::file_size(model_path)},{"image_id",item.at("id")},{"image_file_name",filename},{"seed",actual_seed},{"seed_used",explicit_image?json(nullptr):json(seed)},{"warmup_iterations",warmup},{"measured_iterations",iterations},{"threads",threads},{"time_unit","ms"},{"std_definition","population (N divisor)"},{"input_shape",is},{"output_shape",os},{"box_units",units},{"precision",precision_metadata(*model->GetModel(),*interpreter->input_tensor(0),*interpreter->output_tensor(0))},{"statistics",{{"preprocess_ms",statsJson(pre)},{"inference_ms",statsJson(infer)},{"postprocess_ms",statsJson(post)},{"total_ms",statsJson(total)}}},{"warmup_sample",warmup_times},{"per_iteration",samples}};
   std::ofstream f(prefix.string()+"_benchmark.json");if(!f)throw std::runtime_error("Cannot write benchmark JSON");f<<summary.dump(2);return 0;
  }
  if(argc!=7&&argc!=8){std::cerr<<"Usage: yolo_tflite MODEL.tflite IMAGES MANIFEST OUTPUT_PREFIX THREADS normalized|pixels [xnnpack|builtin]\n";return 1;}
@@ -151,7 +170,7 @@ int main(int argc,char**argv){try{
  }
  if(prefix.has_parent_path())fs::create_directories(prefix.parent_path());
  json means;for(auto key:{"load_ms","preprocess_ms","inference_ms","postprocess_ms","total_ms"}){double sum=0;for(auto&v:timings)sum+=v[key].get<double>();means[key]=sum/timings.size();}
- json summary={{"runtime","TFLite C++ Interpreter API"},{"runtime_version",TFLITE_VERSION_STRING},{"backend",backend},{"model",argv[1]},{"model_bytes",fs::file_size(argv[1])},{"input_shape",is},{"output_shape",os},{"box_units",units},{"precision","FP32 baseline; no FP16 forcing"},{"threads",threads},{"imgsz",640},{"batch",1},{"warmup",5},{"conf",0.001},{"nms_iou",0.7},{"max_det",100},{"means",means},{"per_image",timings},{"manifest",manifest}};
+ json summary={{"runtime","TFLite C++ Interpreter API"},{"runtime_version",TFLITE_VERSION_STRING},{"backend",backend},{"model",argv[1]},{"model_bytes",fs::file_size(argv[1])},{"input_shape",is},{"output_shape",os},{"box_units",units},{"precision",precision_metadata(*model->GetModel(),*interpreter->input_tensor(0),*interpreter->output_tensor(0))},{"threads",threads},{"imgsz",640},{"batch",1},{"warmup",5},{"conf",0.001},{"nms_iou",0.7},{"max_det",100},{"means",means},{"per_image",timings},{"manifest",manifest}};
  auto write=[](const std::string&p,const json&j){std::ofstream f(p);if(!f)throw std::runtime_error("Cannot write "+p);f<<j.dump(2);};
  write(prefix.string()+"_predictions.json",predictions);write(prefix.string()+"_timing.json",summary);std::cout<<means.dump(2)<<"\n";
  return 0;

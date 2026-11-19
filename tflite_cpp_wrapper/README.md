@@ -67,6 +67,7 @@ Reference Python/PyTorch full-set mAP50-95: 0.3657. Repeat latency measurements 
 
 - PREFIX_predictions.json: COCO detection results (overwritten on same prefix).
 - PREFIX_timing.json: model bytes, runtime version, backend, threads, layouts, coordinate units, per-image timings and mean timings.
+- In evaluation and benchmark JSON, `precision` is an object. `input_dtype` and `output_dtype` come from the interpreter. `graph_tensor_counts_by_type` counts declared tensors across all subgraphs in the model file, including constants. These counts describe the graph. `runtime_kernel_precision.status` is `not_profiled` because the wrapper does not profile kernel arithmetic. Older JSON files may contain a fixed string in `precision`.
 - Metrics JSON from coco_tools.py; limit=0 selects the entire validation set.
 - Five warmup invocations, excluded. One image at a time, 640x640 square letterbox, RGB /255, padding 114, OpenCV linear resize.
 - Best class per anchor, confidence >=.001, class-aware NMS at .7 IoU, cap 100 detections, clip boxes after NMS. Rounding uses nearbyint (nearest-even under default rounding).
