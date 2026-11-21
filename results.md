@@ -18,6 +18,7 @@ Datumi i vremena označavaju lokalno prikazano vreme poslednje izmene izveštaja
 | 10. Laptop C++/TFLite FP16 težine + XNNPACK | 13.11.2026. 14:41:03 | 5000 | 4 | 0.365739231 | 0.513939614 | 0.397913472 | 102.745131 | 116.238675 |
 | 11. RPi C++/TFLite FP16 težine + XNNPACK | 13.11.2026. 15:28:05 | 5000 | 4 | 0.365741991 | 0.513939253 | 0.397913689 | 440.392685 | 463.385106 |
 | 12. Laptop C++/TFLite INT8 + XNNPACK | 19.11.2026. 12:33:58 | 5000 | 4 | 0.281072752 | 0.454539481 | 0.308678337 | 116.931647 | 142.448698 |
+| 13. RPi C++/TFLite INT8 + XNNPACK | 21.11.2026. 12:34:47 | 5000 | 4 | 0.281063989 | 0.454534217 | 0.308673822 | 210.095403 | 233.429724 |
 
 Zajednički parametri: YOLOv8n, CPU, COCO val2017, deterministički izbor po rastućem ID-u, 640×640, batch 1, `conf=0.001`, NMS IoU 0.7, najviše 100 detekcija, pet warmup prolaza isključenih iz merenja. Provereno je da Python i TFLite koriste iste ID-eve istim redosledom za odgovarajuću veličinu testa. TFLite testovi su završeni: postoje i timing i COCO metrics izveštaji.
 
@@ -284,6 +285,27 @@ mAP50 je 0.454539, mAP75 je 0.308678, AR@1 je 0.254274, a AR@10 je 0.416644.
 
 U odnosu na laptop FP32 prolaz na istim slikama, mAP50–95 je niži za **8,46 procentnih poena**, a prosečno inference vreme je **1,23% duže** (116,93 prema 115,52 ms/slika). Obe vrednosti vremena potiču iz pojedinačnih sačuvanih prolaza.
 
+## 13. Raspberry Pi C++/TFLite INT8 — 5000 slika
+
+TFLite C++ 2.20.0, XNNPACK, četiri niti i pet warmup prolaza. Svih 5000 ID-jeva poklapa se sa RPi FP32 prolazom istim redosledom. Timing JSON ima staru fiksnu oznaku u polju `precision`. Tipove tenzora modela beleži pregled grafa, a preciznost kernela nije profilisana. [Timing](results/rpi_tflite_int8_5000_timing.json) · [COCO metrike](results/rpi_tflite_int8_5000_metrics.json) · [Predikcije](results/rpi_tflite_int8_5000_predictions.json) · [Pregled grafa](models/tflite_int8/inspection.json)
+
+| Faza | Prosek, ms/slika |
+|---|---:|
+| Učitavanje | 9.640214 |
+| Pretprocesiranje | 8.246468 |
+| Inference | 210.095403 |
+| Postprocesiranje | 5.443570 |
+| Ukupno | 233.429724 |
+
+| COCO metrika | Sve veličine | Male | Srednje | Velike |
+|---|---:|---:|---:|---:|
+| AP50–95 | 0.281064 | 0.106638 | 0.294872 | 0.442368 |
+| AR, maxDets=100 | 0.455594 | 0.227309 | 0.503641 | 0.633530 |
+
+mAP50 je 0.454534, mAP75 je 0.308674, AR@1 je 0.254274, a AR@10 je 0.416631.
+
+U odnosu na RPi FP32 prolaz, mAP50–95 je niži za **8,46 procentnih poena**. Prosečno inference vreme je kraće za **50,66%**, a ukupna obrada za **47,86%**. Ukupno vreme odgovara približno **4,28 slika/s**.
+
 ## Poređenje laptop i Raspberry Pi TFLite rezultata na 5000 slika
 
 | Metrika | Laptop FP32 | Laptop FP16 težine | RPi FP32 | RPi FP16 težine |
@@ -351,6 +373,9 @@ Vrednosti su izračunate iz svakog run-a i prikazane u ms. `Mean` je aritmetičk
 | RPi FP16 weights, 5000 | Preprocess | 8.202460 | 8.023194 | 0.557028 | 6.840084 | 14.296861 |
 | RPi FP16 weights, 5000 | Inference | 440.392685 | 440.229800 | 1.744963 | 433.021123 | 462.672541 |
 | RPi FP16 weights, 5000 | Postprocess | 5.523155 | 5.494257 | 0.144905 | 5.318276 | 6.721144 |
+| RPi INT8, 5000 | Preprocess | 8.246468 | 8.087449 | 0.521639 | 6.931173 | 14.314424 |
+| RPi INT8, 5000 | Inference | 210.095403 | 209.903901 | 0.941081 | 208.651681 | 234.099782 |
+| RPi INT8, 5000 | Postprocess | 5.443570 | 5.419756 | 0.115944 | 5.272063 | 6.286271 |
 
 ### Šta znače faze i koje vreme je prikazano
 
