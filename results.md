@@ -308,15 +308,15 @@ U odnosu na RPi FP32 prolaz, mAP50–95 je niži za **8,46 procentnih poena**. P
 
 ## Poređenje laptop i Raspberry Pi TFLite rezultata na 5000 slika
 
-| Metrika | Laptop FP32 | Laptop FP16 težine | RPi FP32 | RPi FP16 težine |
-|---|---:|---:|---:|---:|
-| CPU niti | 4 | 4 | 4 | 4 |
-| mAP50–95 | 0.365711977 | 0.365739231 | 0.365712541 | 0.365741991 |
-| mAP50 | 0.513711181 | 0.513939614 | 0.513711214 | 0.513939253 |
-| mAP75 | 0.397511274 | 0.397913472 | 0.397511281 | 0.397913689 |
-| Inference, ms/slika | 115.516409 | 102.745131 | 425.772376 | 440.392685 |
-| Ukupno, ms/slika | 131.939457 | 116.238675 | 447.709495 | 463.385106 |
-| Slike/s iz prosečnog ukupnog vremena | 7.58 | 8.60 | 2.23 | 2.16 |
+| Metrika | Laptop FP32 | Laptop FP16 težine | Laptop INT8 | RPi FP32 | RPi FP16 težine | RPi INT8 |
+|---|---:|---:|---:|---:|---:|---:|
+| CPU niti | 4 | 4 | 4 | 4 | 4 | 4 |
+| mAP50–95 | 0.365711977 | 0.365739231 | 0.281072752 | 0.365712541 | 0.365741991 | 0.281063989 |
+| mAP50 | 0.513711181 | 0.513939614 | 0.454539481 | 0.513711214 | 0.513939253 | 0.454534217 |
+| mAP75 | 0.397511274 | 0.397913472 | 0.308678337 | 0.397511281 | 0.397913689 | 0.308673822 |
+| Inference, ms/slika | 115.516409 | 102.745131 | 116.931647 | 425.772376 | 440.392685 | 210.095403 |
+| Ukupno, ms/slika | 131.939457 | 116.238675 | 142.448698 | 447.709495 | 463.385106 | 233.429724 |
+| Slike/s iz prosečnog ukupnog vremena | 7.58 | 8.60 | 7.02 | 2.23 | 2.16 | 4.28 |
 
 Sa FP32 težinama, RPi inference vreme je **3.69 puta veće**, a ukupno vreme obrade **3.39 puta veće** od laptop prolaza. Sa FP16 težinama, RPi inference je **4.29 puta veći**, a ukupno vreme **3.98 puta veće** od laptop prolaza. mAP rezultati su vrlo bliski, ali nisu bitno identični. Poređenje menja hardver i uslove izvršavanja.
 
@@ -338,17 +338,17 @@ Za Python su ove vrednosti preuzete iz tekstualnog `coco_summary` i zato imaju s
 
 Nove RPi metrike su takođe zaokružene na tri decimale; pune vrednosti su u odgovarajućim `all_coco_stats` nizovima.
 
-| Metrika | RPi TFLite 50 | RPi TFLite 5000 |
-|---|---:|---:|
-| AP small | 0.252 | 0.173 |
-| AP medium | 0.469 | 0.404 |
-| AP large | 0.663 | 0.518 |
-| AR maxDets=1 | 0.322 | 0.303 |
-| AR maxDets=10 | 0.518 | 0.492 |
-| AR maxDets=100 | 0.531 | 0.531 |
-| AR small | 0.331 | 0.289 |
-| AR medium | 0.600 | 0.591 |
-| AR large | 0.729 | 0.703 |
+| Metrika | RPi FP32, 50 | RPi FP32, 5000 | RPi INT8, 5000 |
+|---|---:|---:|---:|
+| AP small | 0.252 | 0.173 | 0.107 |
+| AP medium | 0.469 | 0.404 | 0.295 |
+| AP large | 0.663 | 0.518 | 0.442 |
+| AR maxDets=1 | 0.322 | 0.303 | 0.254 |
+| AR maxDets=10 | 0.518 | 0.492 | 0.417 |
+| AR maxDets=100 | 0.531 | 0.531 | 0.456 |
+| AR small | 0.331 | 0.289 | 0.227 |
+| AR medium | 0.600 | 0.591 | 0.504 |
+| AR large | 0.729 | 0.703 | 0.634 |
 
 ## Značenje vremena i ograničenja
 
