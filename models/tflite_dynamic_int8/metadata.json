@@ -1,0 +1,33 @@
+{
+  "recipe": "dynamic_wi8_afp32",
+  "calibration_used": false,
+  "packages": {
+    "ai-edge-quantizer": "0.10.1",
+    "ai-edge-litert": "2.3.0"
+  },
+  "module_paths": {
+    "ai_edge_quantizer.recipe": "/home/veki/venvs/yolo-tflite-export-py312/lib/python3.12/site-packages/ai_edge_quantizer/recipe.py",
+    "ai_edge_quantizer.quantizer": "/home/veki/venvs/yolo-tflite-export-py312/lib/python3.12/site-packages/ai_edge_quantizer/quantizer.py",
+    "ai_edge_litert.interpreter": "/home/veki/venvs/yolo-tflite-export-py312/lib/python3.12/site-packages/ai_edge_litert/interpreter.py",
+    "ai_edge_litert.schema_py_generated": "/home/veki/venvs/yolo-tflite-export-py312/lib/python3.12/site-packages/ai_edge_litert/schema_py_generated.py"
+  },
+  "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+  "python_executable": "/home/veki/venvs/yolo-tflite-export-py312/bin/python",
+  "command": "/home/veki/venvs/yolo-tflite-export-py312/bin/python tflite_cpp_wrapper/quantize_dynamic_int8.py --source models/tflite_fp32/yolov8n_fp32.tflite --output-dir models/tflite_dynamic_int8",
+  "working_directory": "/mnt/d/yolo_test",
+  "source": {
+    "path": "models/tflite_fp32/yolov8n_fp32.tflite",
+    "sha256": "c2cbb871b2690f9aaf1a3c500e651c0560016a25f7685bcaa781ff4eac80b50b",
+    "bytes": 12841242
+  },
+  "contract": {
+    "path": "models/tflite_fp32/yolov8n_fp32.contract.json",
+    "sha256": "5887bf0f393f90dad11b00a7fdce175299e53a45230a09df26accfadbddb7350"
+  },
+  "output": {
+    "path": "models/tflite_dynamic_int8/yolov8n_dynamic_int8.tflite",
+    "sha256": "72bce29e70214d0ab36f6bdf0501cc85131a0fcf02eb4dd2cea0832e0cc70e8d",
+    "bytes": 3470736
+  },
+  "status": "passed"
+}
