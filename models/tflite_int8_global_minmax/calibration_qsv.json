@@ -1,0 +1,2587 @@
+{
+  "model_qsvs": {
+    "serving_default_args_0": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "serving_default_output_0_output": {
+      "min": [
+        -0.014050978235900402
+      ],
+      "max": [
+        1.017327070236206
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/torch.nn.modules.upsampling.Upsample_10;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.366168022155762
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/torch.nn.modules.upsampling.Upsample_13;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.929618835449219
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.376590728759766
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.31487012267462e-06
+      ],
+      "max": [
+        0.9999688863754272
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.159004211425781
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -12.144996643066406
+      ],
+      "max": [
+        10.376914024353027
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        12.338929176330566
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.769963273545727e-05
+      ],
+      "max": [
+        0.9999956488609314
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -10.941948890686035
+      ],
+      "max": [
+        12.338982582092285
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.450060844421387
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.3239793992834166e-05
+      ],
+      "max": [
+        0.9999985694885254
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -10.311729431152344
+      ],
+      "max": [
+        13.450079917907715
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.929618835449219
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.0751858755829744e-06
+      ],
+      "max": [
+        0.9998677372932434
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -13.085457801818848
+      ],
+      "max": [
+        8.930800437927246
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.450060844421387
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.450060844421387
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.426133632659912
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0005324363010004163
+      ],
+      "max": [
+        0.9984004497528076
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        7.712724208831787
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -7.537514686584473
+      ],
+      "max": [
+        6.436429023742676
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.855093002319336
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.2117299269884825e-05
+      ],
+      "max": [
+        0.9999475479125977
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -10.346083641052246
+      ],
+      "max": [
+        9.855609893798828
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        7.712724208831787
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.348441052570706e-06
+      ],
+      "max": [
+        0.9995546340942383
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -12.345688819885254
+      ],
+      "max": [
+        7.716160774230957
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.25999927520752
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.73580724549538e-06
+      ],
+      "max": [
+        0.9997419714927673
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -13.264036178588867
+      ],
+      "max": [
+        8.262130737304688
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.54412317276001
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.855093002319336
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.5555644035339355
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.098414592590416e-06
+      ],
+      "max": [
+        0.9985928535461426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.965747833251953
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -12.404906272888184
+      ],
+      "max": [
+        6.564802169799805
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.659822463989258
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.9272406720792787e-08
+      ],
+      "max": [
+        0.9999988079071045
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -17.346620559692383
+      ],
+      "max": [
+        13.659838676452637
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.989526748657227
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.699246917676646e-07
+      ],
+      "max": [
+        0.9999997019767761
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -14.809966087341309
+      ],
+      "max": [
+        14.989531517028809
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.452998161315918
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.0334843203452238e-08
+      ],
+      "max": [
+        0.9997871518135071
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -18.387744903564453
+      ],
+      "max": [
+        8.454797744750977
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.989526748657227
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.989526748657227
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.5407069966821815e-19
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        40.86844253540039
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        28.095619201660156
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -43.31687545776367
+      ],
+      "max": [
+        40.86844253540039
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        45.09895706176758
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.0087449329819631e-22
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -49.9593620300293
+      ],
+      "max": [
+        45.09895706176758
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0;": {
+      "min": [
+        -0.5569289922714233
+      ],
+      "max": [
+        51.93682098388672
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        52.671077728271484
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -129.77586364746094
+      ],
+      "max": [
+        52.671077728271484
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        21.361854553222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.818482131717787e-16
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -35.080322265625
+      ],
+      "max": [
+        21.361854553222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.798030853271484
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.6576919935905607e-06
+      ],
+      "max": [
+        0.999979555606842
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.451533317565918
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -12.83804988861084
+      ],
+      "max": [
+        10.798251152038574
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        16.490474700927734
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.6154045212601886e-08
+      ],
+      "max": [
+        0.9999999403953552
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -17.94109535217285
+      ],
+      "max": [
+        16.490476608276367
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.451533317565918
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.254044406096e-07
+      ],
+      "max": [
+        0.99998939037323
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -15.891721725463867
+      ],
+      "max": [
+        11.451654434204102
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.97412395477295
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.517637571331592e-14
+      ],
+      "max": [
+        0.9999936819076538
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -31.81903648376465
+      ],
+      "max": [
+        11.974199295043945
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.757421493530273
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        16.490474700927734
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        52.671077728271484
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2;1": {
+      "min": [
+        -0.5569289922714233
+      ],
+      "max": [
+        52.671077728271484
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0002537500986363739
+      ],
+      "max": [
+        0.9983294606208801
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.382249355316162
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        5.178238391876221
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -8.27890682220459
+      ],
+      "max": [
+        6.3929290771484375
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.590428829193115
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.4757940233685076e-05
+      ],
+      "max": [
+        0.9986406564712524
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -9.812533378601074
+      ],
+      "max": [
+        6.599399566650391
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0;": {
+      "min": [
+        -0.5569289326667786
+      ],
+      "max": [
+        8.727459907531738
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        6.582454204559326
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.8891954571008682e-05
+      ],
+      "max": [
+        0.9986298680305481
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -10.451918601989746
+      ],
+      "max": [
+        6.591485500335693
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.574585914611816
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.5934218683687504e-07
+      ],
+      "max": [
+        0.9999905824661255
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -15.165117263793945
+      ],
+      "max": [
+        11.574694633483887
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1;": {
+      "min": [
+        -0.8353903889656067
+      ],
+      "max": [
+        14.143176078796387
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.21910285949707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.1161881136322336e-08
+      ],
+      "max": [
+        0.9999982118606567
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -17.671064376831055
+      ],
+      "max": [
+        13.21912670135498
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.587303161621094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.55111512565054e-06
+      ],
+      "max": [
+        0.999990701675415
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -12.30013370513916
+      ],
+      "max": [
+        11.587410926818848
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.21910285949707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4;1": {
+      "min": [
+        -0.8353903889656067
+      ],
+      "max": [
+        14.143176078796387
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.2838721128646284e-05
+      ],
+      "max": [
+        0.9999178051948547
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.405740737915039
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.682516098022461
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -10.058025360107422
+      ],
+      "max": [
+        9.406514167785645
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.055699348449707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.00014658285363111645
+      ],
+      "max": [
+        0.9998834133148193
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -8.827773094177246
+      ],
+      "max": [
+        9.056755065917969
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0;": {
+      "min": [
+        -0.5569289922714233
+      ],
+      "max": [
+        11.777046203613281
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        12.262112617492676
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.00010794749687192962
+      ],
+      "max": [
+        0.9999952912330627
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -9.133757591247559
+      ],
+      "max": [
+        12.262170791625977
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        24.626285552978516
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.151894523156784e-09
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -19.57526206970215
+      ],
+      "max": [
+        24.626285552978516
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1;": {
+      "min": [
+        -0.8353854417800903
+      ],
+      "max": [
+        26.132429122924805
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.602768898010254
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.2997886592056602e-06
+      ],
+      "max": [
+        0.9999751448631287
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -12.621648788452148
+      ],
+      "max": [
+        10.603032112121582
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.95821475982666
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.3740670662373304e-05
+      ],
+      "max": [
+        0.9999526739120483
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -10.037188529968262
+      ],
+      "max": [
+        9.958685874938965
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.602768898010254
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6;1": {
+      "min": [
+        -0.8353854417800903
+      ],
+      "max": [
+        26.132429122924805
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        7.464070677087875e-07
+      ],
+      "max": [
+        0.9999999403953552
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        16.563617706298828
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.06437873840332
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -14.107994079589844
+      ],
+      "max": [
+        16.56361961364746
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        22.86650276184082
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        7.466289808633064e-09
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -18.712867736816406
+      ],
+      "max": [
+        22.86650276184082
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0;": {
+      "min": [
+        -0.5569291114807129
+      ],
+      "max": [
+        22.616910934448242
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.581186294555664
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.6993096166317834e-11
+      ],
+      "max": [
+        0.9999995231628418
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -24.798213958740234
+      ],
+      "max": [
+        14.581192970275879
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        13.060701370239258
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.9271516293883906e-07
+      ],
+      "max": [
+        0.9999978542327881
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -15.462052345275879
+      ],
+      "max": [
+        13.060729026794434
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.581186294555664
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8;1": {
+      "min": [
+        -0.5569291114807129
+      ],
+      "max": [
+        22.616910934448242
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/torch.nn.modules.pooling.MaxPool2d_m;": {
+      "min": [
+        -0.27099767327308655
+      ],
+      "max": [
+        8.983034133911133
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/torch.nn.modules.pooling.MaxPool2d_m;1": {
+      "min": [
+        -0.2350541353225708
+      ],
+      "max": [
+        8.983034133911133
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/torch.nn.modules.pooling.MaxPool2d_m;2": {
+      "min": [
+        -0.21365953981876373
+      ],
+      "max": [
+        8.983034133911133
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.983034133911133
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0005171169177629054
+      ],
+      "max": [
+        0.9998746514320374
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -7.5667243003845215
+      ],
+      "max": [
+        8.984160423278809
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.366168022155762
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        4.566403731587343e-05
+      ],
+      "max": [
+        0.9999884366989136
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -9.99415397644043
+      ],
+      "max": [
+        11.366299629211426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.983034133911133
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_11;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.366168022155762
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_14;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.587303161621094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_17;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.606167793273926
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_20;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.366168022155762
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.1837124669277563e-30
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        64.51121520996094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -68.90889739990234
+      ],
+      "max": [
+        64.51121520996094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        182.20541381835938
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        64.51121520996094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -178.7353057861328
+      ],
+      "max": [
+        182.20541381835938
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.606167793273926
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.5568389901309274e-05
+      ],
+      "max": [
+        0.9999327063560486
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.25999927520752
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -10.574128150939941
+      ],
+      "max": [
+        9.60681438446045
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        10.821403503417969
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.4116357028324273e-07
+      ],
+      "max": [
+        0.9999800324440002
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.452998161315918
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -14.89090347290039
+      ],
+      "max": [
+        10.821619987487793
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.0706518097379778e-11
+      ],
+      "max": [
+        0.999947190284729
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.848185539245605
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        21.361854553222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -24.60057258605957
+      ],
+      "max": [
+        9.848705291748047
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.74291298960361e-08
+      ],
+      "max": [
+        0.9998317956924438
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.688753128051758
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.587303161621094
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -16.672714233398438
+      ],
+      "max": [
+        8.690215110778809
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        1.2934232472616713e-05
+      ],
+      "max": [
+        0.9999848008155823
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.095009803771973
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.95821475982666
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;3": {
+      "min": [
+        -11.255620002746582
+      ],
+      "max": [
+        11.095178604125977
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;4": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;5": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;6": {
+      "min": [
+        -40.32146072387695
+      ],
+      "max": [
+        2.98419189453125
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;7": {
+      "min": [
+        -40.32146072387695
+      ],
+      "max": [
+        2.98419189453125
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        9.190420150756836
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        6.398176424227131e-07
+      ],
+      "max": [
+        0.9997722506523132
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        8.385128021240234
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.105331435384386e-11
+      ],
+      "max": [
+        0.9998980760574341
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;": {
+      "min": [
+        -23.698150634765625
+      ],
+      "max": [
+        9.191356658935547
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;1": {
+      "min": [
+        -14.26208209991455
+      ],
+      "max": [
+        8.387038230895996
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        59.45162582397461
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        121.17010498046875
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        5.165023278260737e-17
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -37.502037048339844
+      ],
+      "max": [
+        59.45162582397461
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5": {
+      "min": [
+        -150.78216552734375
+      ],
+      "max": [
+        121.17010498046875
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;4": {
+      "min": [
+        -10.451790809631348
+      ],
+      "max": [
+        18.16734504699707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;5": {
+      "min": [
+        -10.451790809631348
+      ],
+      "max": [
+        18.16734504699707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;6": {
+      "min": [
+        -62.15254592895508
+      ],
+      "max": [
+        2.978355884552002
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;7": {
+      "min": [
+        -62.15254592895508
+      ],
+      "max": [
+        2.978355884552002
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        15.648162841796875
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        3.5721606228555913e-11
+      ],
+      "max": [
+        0.9999932050704956
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;2": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        11.902589797973633
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.038196555975702e-10
+      ],
+      "max": [
+        0.9999998211860657
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;": {
+      "min": [
+        -22.313785552978516
+      ],
+      "max": [
+        15.648165702819824
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;1": {
+      "min": [
+        -24.055265426635742
+      ],
+      "max": [
+        11.902670860290527
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        57.66263961791992
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        147.1170196533203
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.4871580224332773e-22
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -49.745731353759766
+      ],
+      "max": [
+        57.66263961791992
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5": {
+      "min": [
+        -149.71441650390625
+      ],
+      "max": [
+        147.1170196533203
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;4": {
+      "min": [
+        -8.96371841430664
+      ],
+      "max": [
+        14.96872615814209
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;5": {
+      "min": [
+        -8.96371841430664
+      ],
+      "max": [
+        14.96872615814209
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;6": {
+      "min": [
+        -64.65950012207031
+      ],
+      "max": [
+        3.477139472961426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;7": {
+      "min": [
+        -64.65950012207031
+      ],
+      "max": [
+        3.477139472961426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        3.423547834113805e-10
+      ],
+      "max": [
+        0.9999993443489075
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        14.270646095275879
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;2": {
+      "min": [
+        4.123483865692496e-15
+      ],
+      "max": [
+        0.9999964833259583
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;3": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        12.551605224609375
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -21.79517364501953
+      ],
+      "max": [
+        14.270655632019043
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;": {
+      "min": [
+        -33.12207794189453
+      ],
+      "max": [
+        12.55164909362793
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        52.121673583984375
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        -0.27846455574035645
+      ],
+      "max": [
+        106.53024291992188
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;": {
+      "min": [
+        2.0253189655428973e-14
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1": {
+      "min": [
+        0.0
+      ],
+      "max": [
+        1.0
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4": {
+      "min": [
+        -31.53046417236328
+      ],
+      "max": [
+        52.121673583984375
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5": {
+      "min": [
+        -106.49275970458984
+      ],
+      "max": [
+        106.53024291992188
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl/torch.nn.modules.conv.Conv2d_conv;2": {
+      "min": [
+        0.018367033451795578
+      ],
+      "max": [
+        14.720829010009766
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl;2": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl;3": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl;4": {
+      "min": [
+        6.169838809777159e-16
+      ],
+      "max": [
+        0.9847139716148376
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl;5": {
+      "min": [
+        0.018367033451795578
+      ],
+      "max": [
+        14.720829010009766
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;11": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;12": {
+      "min": [
+        -10.451790809631348
+      ],
+      "max": [
+        18.16734504699707
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;13": {
+      "min": [
+        -8.96371841430664
+      ],
+      "max": [
+        14.96872615814209
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;14": {
+      "min": [
+        -10.938112258911133
+      ],
+      "max": [
+        27.857948303222656
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;15": {
+      "min": [
+        -40.32146072387695
+      ],
+      "max": [
+        2.98419189453125
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;16": {
+      "min": [
+        -62.15254592895508
+      ],
+      "max": [
+        2.978355884552002
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;17": {
+      "min": [
+        -64.65950012207031
+      ],
+      "max": [
+        3.477139472961426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;18": {
+      "min": [
+        -64.65950012207031
+      ],
+      "max": [
+        3.477139472961426
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;19": {
+      "min": [
+        0.018367033451795578
+      ],
+      "max": [
+        14.720829010009766
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;20": {
+      "min": [
+        0.02914280630648136
+      ],
+      "max": [
+        14.497994422912598
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;21": {
+      "min": [
+        -4.284431457519531
+      ],
+      "max": [
+        79.39997863769531
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;22": {
+      "min": [
+        0.5588152408599854
+      ],
+      "max": [
+        83.49625396728516
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;23": {
+      "min": [
+        -0.5620391368865967
+      ],
+      "max": [
+        159.37844848632812
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;24": {
+      "min": [
+        -0.28101956844329834
+      ],
+      "max": [
+        79.68922424316406
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;25": {
+      "min": [
+        0.29581737518310547
+      ],
+      "max": [
+        28.619098663330078
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;26": {
+      "min": [
+        -0.28101956844329834
+      ],
+      "max": [
+        79.68922424316406
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;27": {
+      "min": [
+        -8.992626190185547
+      ],
+      "max": [
+        651.0892944335938
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;28": {
+      "min": [
+        8.29346360064462e-29
+      ],
+      "max": [
+        0.9700302481651306
+      ]
+    },
+    "ultralytics.utils.export.engine._NormalizeCoords;1": {
+      "min": [
+        -0.014050978235900402
+      ],
+      "max": [
+        1.017327070236206
+      ]
+    }
+  },
+  "metadata": {
+    "num_samples_calibrated": 500,
+    "provenance": {
+      "source_model": "models/tflite_fp32/yolov8n_fp32.tflite",
+      "source_sha256": "c2cbb871b2690f9aaf1a3c500e651c0560016a25f7685bcaa781ff4eac80b50b",
+      "manifest": "calibration/coco_train2017_500_seed42/manifest.json",
+      "manifest_sha256": "5b026ab881c980689543213bc88dea792dce13a778bc2d46162200e665daf892",
+      "image_ids": [
+        411685,
+        71573,
+        16285,
+        478093,
+        177361,
+        157559,
+        143450,
+        89949,
+        474780,
+        65859,
+        436025,
+        477526,
+        575395,
+        351550,
+        55727,
+        380510,
+        272859,
+        20611,
+        19391,
+        60132,
+        140454,
+        149410,
+        326111,
+        387919,
+        17273,
+        361512,
+        127905,
+        461521,
+        418652,
+        452187,
+        351268,
+        271240,
+        141651,
+        290259,
+        379636,
+        179477,
+        522105,
+        560923,
+        4478,
+        489099,
+        519827,
+        102793,
+        450110,
+        273323,
+        219842,
+        179200,
+        100034,
+        138413,
+        492170,
+        217322,
+        65588,
+        59494,
+        245562,
+        62151,
+        231851,
+        546963,
+        222206,
+        388955,
+        170253,
+        520696,
+        27776,
+        470423,
+        296755,
+        345751,
+        80389,
+        244614,
+        50507,
+        355778,
+        189052,
+        535106,
+        404740,
+        398571,
+        571427,
+        556101,
+        233558,
+        371839,
+        123843,
+        454269,
+        44579,
+        29304,
+        426038,
+        146469,
+        498372,
+        186685,
+        51119,
+        552093,
+        149469,
+        559163,
+        64842,
+        245717,
+        179278,
+        292986,
+        409179,
+        538231,
+        235670,
+        104602,
+        239038,
+        229440,
+        134747,
+        431872,
+        172006,
+        452536,
+        440484,
+        417369,
+        45622,
+        392506,
+        408792,
+        109945,
+        344307,
+        470004,
+        157497,
+        105079,
+        298468,
+        245271,
+        174042,
+        412015,
+        443537,
+        358869,
+        141063,
+        441216,
+        209374,
+        543782,
+        495199,
+        500167,
+        35741,
+        147172,
+        530367,
+        20818,
+        519329,
+        203794,
+        259186,
+        172506,
+        42429,
+        135730,
+        365295,
+        565211,
+        462807,
+        203349,
+        136819,
+        422240,
+        322278,
+        255582,
+        570822,
+        413927,
+        296377,
+        92092,
+        170506,
+        90026,
+        158701,
+        480322,
+        361593,
+        347467,
+        169040,
+        481553,
+        376715,
+        277174,
+        578796,
+        375916,
+        258035,
+        233817,
+        140866,
+        89203,
+        328791,
+        318562,
+        58335,
+        487236,
+        30143,
+        555738,
+        70411,
+        98405,
+        403981,
+        103008,
+        510860,
+        438477,
+        273046,
+        384263,
+        40735,
+        248678,
+        246609,
+        383949,
+        302281,
+        341027,
+        161740,
+        356570,
+        555520,
+        7726,
+        438329,
+        464736,
+        73626,
+        439288,
+        570878,
+        346179,
+        484103,
+        171850,
+        495403,
+        412687,
+        219792,
+        71713,
+        189278,
+        281131,
+        101820,
+        293207,
+        2068,
+        465588,
+        564911,
+        463892,
+        169480,
+        323149,
+        491203,
+        114925,
+        327563,
+        68219,
+        561630,
+        402689,
+        192453,
+        543062,
+        411368,
+        327551,
+        392364,
+        127932,
+        98395,
+        241525,
+        491577,
+        103969,
+        347715,
+        502012,
+        341815,
+        415,
+        385885,
+        209287,
+        315393,
+        12810,
+        71911,
+        234463,
+        566762,
+        536576,
+        520478,
+        198448,
+        154002,
+        36990,
+        154892,
+        566278,
+        365358,
+        50480,
+        54903,
+        471863,
+        313799,
+        526542,
+        44352,
+        490294,
+        343393,
+        493717,
+        80969,
+        82735,
+        425041,
+        306936,
+        354392,
+        106104,
+        170636,
+        340145,
+        562805,
+        390856,
+        273704,
+        136267,
+        347665,
+        486912,
+        470551,
+        444566,
+        129371,
+        459665,
+        201342,
+        257815,
+        432820,
+        418637,
+        241211,
+        283163,
+        579926,
+        333823,
+        291827,
+        77926,
+        159495,
+        144353,
+        41020,
+        218456,
+        13893,
+        379064,
+        357005,
+        147787,
+        379138,
+        141494,
+        4956,
+        45404,
+        456420,
+        406250,
+        37695,
+        147105,
+        43206,
+        20418,
+        554743,
+        213356,
+        45325,
+        331635,
+        153026,
+        179672,
+        431152,
+        313491,
+        137794,
+        347648,
+        85131,
+        466450,
+        569314,
+        367758,
+        371132,
+        305358,
+        156416,
+        505831,
+        305517,
+        520950,
+        263011,
+        122537,
+        60569,
+        62251,
+        424489,
+        278890,
+        228808,
+        274036,
+        265589,
+        301643,
+        557496,
+        469975,
+        34629,
+        433968,
+        420963,
+        416202,
+        63251,
+        38801,
+        260139,
+        469467,
+        219254,
+        516488,
+        556086,
+        70201,
+        160000,
+        123359,
+        122394,
+        345803,
+        289842,
+        90358,
+        272832,
+        118081,
+        179711,
+        298699,
+        160660,
+        564120,
+        48204,
+        286253,
+        521245,
+        555904,
+        552488,
+        354721,
+        62858,
+        32471,
+        420079,
+        348519,
+        539475,
+        9807,
+        59868,
+        485822,
+        547760,
+        151922,
+        106836,
+        262608,
+        313601,
+        310783,
+        137479,
+        558009,
+        259093,
+        581913,
+        37513,
+        105820,
+        244908,
+        1386,
+        252403,
+        170751,
+        505501,
+        506126,
+        293966,
+        184099,
+        273602,
+        449104,
+        470955,
+        504997,
+        358136,
+        426422,
+        463120,
+        314192,
+        99629,
+        122207,
+        191296,
+        139858,
+        37389,
+        373033,
+        474319,
+        349527,
+        39009,
+        482197,
+        202747,
+        36492,
+        32124,
+        376416,
+        307989,
+        324626,
+        550432,
+        342299,
+        101355,
+        36341,
+        327656,
+        51324,
+        549559,
+        119525,
+        43895,
+        383407,
+        43543,
+        435124,
+        556183,
+        151229,
+        260888,
+        77118,
+        574218,
+        366799,
+        158370,
+        372833,
+        383029,
+        25675,
+        399147,
+        52582,
+        271046,
+        423464,
+        376045,
+        364090,
+        336862,
+        204423,
+        167910,
+        131351,
+        431574,
+        461628,
+        203063,
+        153559,
+        171002,
+        255674,
+        84222,
+        415770,
+        193405,
+        295358,
+        204288,
+        484646,
+        46365,
+        6270,
+        296012,
+        400204,
+        362620,
+        64249,
+        46889,
+        346605,
+        137120,
+        326454,
+        85212,
+        225398,
+        568208,
+        44075,
+        567161,
+        157199,
+        238561,
+        183889,
+        101573,
+        283199,
+        537982,
+        350180,
+        453586,
+        195188,
+        394058,
+        520684,
+        421315,
+        340929,
+        5324,
+        430375,
+        527219,
+        357470,
+        192994,
+        427348,
+        66466,
+        566364,
+        86429,
+        170221,
+        74126,
+        573956,
+        68654,
+        478675,
+        100014,
+        175597
+      ],
+      "seed": 42,
+      "packages": {
+        "ultralytics": "8.4.208",
+        "litert-torch": "0.10.0",
+        "ai-edge-litert": "2.3.0",
+        "ai-edge-quantizer": "0.10.1"
+      },
+      "opencv": "5.0.0",
+      "numpy": "2.5.4",
+      "recipe": "recipe.static_wi8_ai8() + NO_QUANTIZE for INPUT and OUTPUT",
+      "mode": "CALIBRATION_PROFILER_BASED",
+      "threads": 16,
+      "signature": "serving_default",
+      "signature_input": "args_0",
+      "qsv_aggregation": "global_minmax",
+      "qsv_update_function": "ai_edge_quantizer.utils.qsv_utils.min_max_update"
+    }
+  }
+}

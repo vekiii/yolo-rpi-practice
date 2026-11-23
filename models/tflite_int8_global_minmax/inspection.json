@@ -1,0 +1,3897 @@
+{
+  "provenance": {
+    "source_model": "models/tflite_fp32/yolov8n_fp32.tflite",
+    "source_sha256": "c2cbb871b2690f9aaf1a3c500e651c0560016a25f7685bcaa781ff4eac80b50b",
+    "manifest": "calibration/coco_train2017_500_seed42/manifest.json",
+    "manifest_sha256": "5b026ab881c980689543213bc88dea792dce13a778bc2d46162200e665daf892",
+    "image_ids": [
+      411685,
+      71573,
+      16285,
+      478093,
+      177361,
+      157559,
+      143450,
+      89949,
+      474780,
+      65859,
+      436025,
+      477526,
+      575395,
+      351550,
+      55727,
+      380510,
+      272859,
+      20611,
+      19391,
+      60132,
+      140454,
+      149410,
+      326111,
+      387919,
+      17273,
+      361512,
+      127905,
+      461521,
+      418652,
+      452187,
+      351268,
+      271240,
+      141651,
+      290259,
+      379636,
+      179477,
+      522105,
+      560923,
+      4478,
+      489099,
+      519827,
+      102793,
+      450110,
+      273323,
+      219842,
+      179200,
+      100034,
+      138413,
+      492170,
+      217322,
+      65588,
+      59494,
+      245562,
+      62151,
+      231851,
+      546963,
+      222206,
+      388955,
+      170253,
+      520696,
+      27776,
+      470423,
+      296755,
+      345751,
+      80389,
+      244614,
+      50507,
+      355778,
+      189052,
+      535106,
+      404740,
+      398571,
+      571427,
+      556101,
+      233558,
+      371839,
+      123843,
+      454269,
+      44579,
+      29304,
+      426038,
+      146469,
+      498372,
+      186685,
+      51119,
+      552093,
+      149469,
+      559163,
+      64842,
+      245717,
+      179278,
+      292986,
+      409179,
+      538231,
+      235670,
+      104602,
+      239038,
+      229440,
+      134747,
+      431872,
+      172006,
+      452536,
+      440484,
+      417369,
+      45622,
+      392506,
+      408792,
+      109945,
+      344307,
+      470004,
+      157497,
+      105079,
+      298468,
+      245271,
+      174042,
+      412015,
+      443537,
+      358869,
+      141063,
+      441216,
+      209374,
+      543782,
+      495199,
+      500167,
+      35741,
+      147172,
+      530367,
+      20818,
+      519329,
+      203794,
+      259186,
+      172506,
+      42429,
+      135730,
+      365295,
+      565211,
+      462807,
+      203349,
+      136819,
+      422240,
+      322278,
+      255582,
+      570822,
+      413927,
+      296377,
+      92092,
+      170506,
+      90026,
+      158701,
+      480322,
+      361593,
+      347467,
+      169040,
+      481553,
+      376715,
+      277174,
+      578796,
+      375916,
+      258035,
+      233817,
+      140866,
+      89203,
+      328791,
+      318562,
+      58335,
+      487236,
+      30143,
+      555738,
+      70411,
+      98405,
+      403981,
+      103008,
+      510860,
+      438477,
+      273046,
+      384263,
+      40735,
+      248678,
+      246609,
+      383949,
+      302281,
+      341027,
+      161740,
+      356570,
+      555520,
+      7726,
+      438329,
+      464736,
+      73626,
+      439288,
+      570878,
+      346179,
+      484103,
+      171850,
+      495403,
+      412687,
+      219792,
+      71713,
+      189278,
+      281131,
+      101820,
+      293207,
+      2068,
+      465588,
+      564911,
+      463892,
+      169480,
+      323149,
+      491203,
+      114925,
+      327563,
+      68219,
+      561630,
+      402689,
+      192453,
+      543062,
+      411368,
+      327551,
+      392364,
+      127932,
+      98395,
+      241525,
+      491577,
+      103969,
+      347715,
+      502012,
+      341815,
+      415,
+      385885,
+      209287,
+      315393,
+      12810,
+      71911,
+      234463,
+      566762,
+      536576,
+      520478,
+      198448,
+      154002,
+      36990,
+      154892,
+      566278,
+      365358,
+      50480,
+      54903,
+      471863,
+      313799,
+      526542,
+      44352,
+      490294,
+      343393,
+      493717,
+      80969,
+      82735,
+      425041,
+      306936,
+      354392,
+      106104,
+      170636,
+      340145,
+      562805,
+      390856,
+      273704,
+      136267,
+      347665,
+      486912,
+      470551,
+      444566,
+      129371,
+      459665,
+      201342,
+      257815,
+      432820,
+      418637,
+      241211,
+      283163,
+      579926,
+      333823,
+      291827,
+      77926,
+      159495,
+      144353,
+      41020,
+      218456,
+      13893,
+      379064,
+      357005,
+      147787,
+      379138,
+      141494,
+      4956,
+      45404,
+      456420,
+      406250,
+      37695,
+      147105,
+      43206,
+      20418,
+      554743,
+      213356,
+      45325,
+      331635,
+      153026,
+      179672,
+      431152,
+      313491,
+      137794,
+      347648,
+      85131,
+      466450,
+      569314,
+      367758,
+      371132,
+      305358,
+      156416,
+      505831,
+      305517,
+      520950,
+      263011,
+      122537,
+      60569,
+      62251,
+      424489,
+      278890,
+      228808,
+      274036,
+      265589,
+      301643,
+      557496,
+      469975,
+      34629,
+      433968,
+      420963,
+      416202,
+      63251,
+      38801,
+      260139,
+      469467,
+      219254,
+      516488,
+      556086,
+      70201,
+      160000,
+      123359,
+      122394,
+      345803,
+      289842,
+      90358,
+      272832,
+      118081,
+      179711,
+      298699,
+      160660,
+      564120,
+      48204,
+      286253,
+      521245,
+      555904,
+      552488,
+      354721,
+      62858,
+      32471,
+      420079,
+      348519,
+      539475,
+      9807,
+      59868,
+      485822,
+      547760,
+      151922,
+      106836,
+      262608,
+      313601,
+      310783,
+      137479,
+      558009,
+      259093,
+      581913,
+      37513,
+      105820,
+      244908,
+      1386,
+      252403,
+      170751,
+      505501,
+      506126,
+      293966,
+      184099,
+      273602,
+      449104,
+      470955,
+      504997,
+      358136,
+      426422,
+      463120,
+      314192,
+      99629,
+      122207,
+      191296,
+      139858,
+      37389,
+      373033,
+      474319,
+      349527,
+      39009,
+      482197,
+      202747,
+      36492,
+      32124,
+      376416,
+      307989,
+      324626,
+      550432,
+      342299,
+      101355,
+      36341,
+      327656,
+      51324,
+      549559,
+      119525,
+      43895,
+      383407,
+      43543,
+      435124,
+      556183,
+      151229,
+      260888,
+      77118,
+      574218,
+      366799,
+      158370,
+      372833,
+      383029,
+      25675,
+      399147,
+      52582,
+      271046,
+      423464,
+      376045,
+      364090,
+      336862,
+      204423,
+      167910,
+      131351,
+      431574,
+      461628,
+      203063,
+      153559,
+      171002,
+      255674,
+      84222,
+      415770,
+      193405,
+      295358,
+      204288,
+      484646,
+      46365,
+      6270,
+      296012,
+      400204,
+      362620,
+      64249,
+      46889,
+      346605,
+      137120,
+      326454,
+      85212,
+      225398,
+      568208,
+      44075,
+      567161,
+      157199,
+      238561,
+      183889,
+      101573,
+      283199,
+      537982,
+      350180,
+      453586,
+      195188,
+      394058,
+      520684,
+      421315,
+      340929,
+      5324,
+      430375,
+      527219,
+      357470,
+      192994,
+      427348,
+      66466,
+      566364,
+      86429,
+      170221,
+      74126,
+      573956,
+      68654,
+      478675,
+      100014,
+      175597
+    ],
+    "seed": 42,
+    "packages": {
+      "ultralytics": "8.4.208",
+      "litert-torch": "0.10.0",
+      "ai-edge-litert": "2.3.0",
+      "ai-edge-quantizer": "0.10.1"
+    },
+    "opencv": "5.0.0",
+    "numpy": "2.5.4",
+    "recipe": "recipe.static_wi8_ai8() + NO_QUANTIZE for INPUT and OUTPUT",
+    "mode": "CALIBRATION_PROFILER_BASED",
+    "threads": 16,
+    "signature": "serving_default",
+    "signature_input": "args_0",
+    "qsv_aggregation": "global_minmax",
+    "qsv_update_function": "ai_edge_quantizer.utils.qsv_utils.min_max_update"
+  },
+  "num_samples_calibrated": 500,
+  "reused_qsv": null,
+  "source_io": {
+    "inputs": [
+      {
+        "name": "serving_default_args_0",
+        "index": 0,
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "dtype": "float32",
+        "quantization": {
+          "scales": [],
+          "zero_points": [],
+          "quantized_dimension": 0,
+          "block_size": 0
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "serving_default_output_0_output",
+        "index": 414,
+        "shape": [
+          1,
+          84,
+          8400
+        ],
+        "dtype": "float32",
+        "quantization": {
+          "scales": [],
+          "zero_points": [],
+          "quantized_dimension": 0,
+          "block_size": 0
+        }
+      }
+    ]
+  },
+  "model": "models/tflite_int8_global_minmax/yolov8n_int8.tflite",
+  "model_bytes": 3481104,
+  "sha256": "60c557d8a17488fd46f68c84cd1c7dffdb6ca8e743867d74a7c16afc264e11e4",
+  "qsv_sha256": "0b78f98fd7b77e6add026d4e5bca557318f5f562ba536b9a0a9a3089d8cca250",
+  "graph": {
+    "tensor_counts_by_type": {
+      "FLOAT32": 2,
+      "INT8": 347,
+      "INT32": 90
+    },
+    "operation_signatures": [
+      {
+        "operation": "ADD",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 8
+      },
+      {
+        "operation": "CONCATENATION",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 6
+      },
+      {
+        "operation": "CONCATENATION",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 8
+      },
+      {
+        "operation": "CONCATENATION",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8",
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 3
+      },
+      {
+        "operation": "CONV_2D",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 64
+      },
+      {
+        "operation": "DEQUANTIZE",
+        "version": 1,
+        "inputs": [
+          "INT8"
+        ],
+        "outputs": [
+          "FLOAT32"
+        ],
+        "count": 1
+      },
+      {
+        "operation": "LOGISTIC",
+        "version": 1,
+        "inputs": [
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 58
+      },
+      {
+        "operation": "MAX_POOL_2D",
+        "version": 1,
+        "inputs": [
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 3
+      },
+      {
+        "operation": "MUL",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 60
+      },
+      {
+        "operation": "PAD",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 7
+      },
+      {
+        "operation": "QUANTIZE",
+        "version": 1,
+        "inputs": [
+          "FLOAT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 1
+      },
+      {
+        "operation": "QUANTIZE",
+        "version": 1,
+        "inputs": [
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 22
+      },
+      {
+        "operation": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 8
+      },
+      {
+        "operation": "RESIZE_NEAREST_NEIGHBOR",
+        "version": 3,
+        "inputs": [
+          "INT8",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 2
+      },
+      {
+        "operation": "SLICE",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT32",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 18
+      },
+      {
+        "operation": "SOFTMAX",
+        "version": 1,
+        "inputs": [
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 1
+      },
+      {
+        "operation": "SUB",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT8"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 2
+      },
+      {
+        "operation": "TRANSPOSE",
+        "version": 1,
+        "inputs": [
+          "INT8",
+          "INT32"
+        ],
+        "outputs": [
+          "INT8"
+        ],
+        "count": 8
+      }
+    ],
+    "convolution_coverage": {
+      "total": 64,
+      "int8_weights": 64,
+      "int8_activations": 64,
+      "int8_weights_and_activations": 64,
+      "operators": [
+        {
+          "subgraph": 0,
+          "index": 3,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 160,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 150,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 16,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 77,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 16,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 161,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 7,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 164,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 149,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 76,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 165,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 10,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 167,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 148,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 75,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 168,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 14,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 171,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 147,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 16,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 72,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 16,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 172,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 17,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 174,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 146,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 16,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 71,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 16,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 175,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 25,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 180,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 145,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 69,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 181,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 29,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 184,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 144,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 68,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 185,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 32,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 187,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_3/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 143,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 67,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 188,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 36,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 191,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 142,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 64,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 192,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 39,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 194,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 141,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 63,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 195,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 43,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 198,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 140,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 62,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 199,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 46,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 201,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 139,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 61,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 202,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 55,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 207,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 138,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 60,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 208,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 59,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 211,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 137,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 59,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 212,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 62,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 214,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_5/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 136,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 58,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 215,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 66,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 218,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 135,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 55,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 219,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 69,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 221,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 134,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 54,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 222,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 73,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 225,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 133,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 53,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 226,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 76,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 228,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 132,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 52,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 229,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_1/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 85,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 234,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 131,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 51,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 235,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 89,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 238,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 130,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 50,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 239,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 92,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 241,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_7/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 129,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 49,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 242,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 96,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 245,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 128,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 46,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 246,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 99,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 248,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 127,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 45,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 249,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 107,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 254,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 126,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 44,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 255,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 110,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 257,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 125,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 43,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 258,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 117,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 264,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 124,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 42,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 265,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.SPPF_9/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 123,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 269,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_11;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 123,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 41,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 270,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 127,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 273,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 122,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 40,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 274,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 130,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 276,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 121,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 39,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 277,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 135,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 281,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 120,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 38,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 282,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 141,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 286,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_14;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 119,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 37,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 287,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 145,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 290,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 118,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 36,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 291,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 148,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 293,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 117,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 32,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 35,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 32,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 294,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 155,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 298,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 116,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 34,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 299,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 159,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 302,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 115,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 33,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 303,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 164,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 306,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_17;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 114,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 32,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 307,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 168,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 310,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 113,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 31,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 311,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 171,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 313,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 112,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 30,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 314,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 176,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 318,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 111,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 29,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 319,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 180,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 322,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 110,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 28,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 323,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 184,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 326,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Concat_20;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 109,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 27,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 327,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 188,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 330,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 108,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 26,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 331,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 191,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 333,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 107,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 128,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 25,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 128,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 334,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 198,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 338,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 106,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 256,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 24,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 256,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 339,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 201,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 301,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 105,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 23,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 342,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 204,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 344,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 104,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 22,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 345,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 207,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 347,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 103,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 21,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 348,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 210,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 321,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 101,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 20,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 351,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 213,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 353,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 100,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 19,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 354,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 216,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 356,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 99,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 18,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 357,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 219,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 341,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 97,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 17,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 360,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 222,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 362,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 96,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 16,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 363,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 225,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 365,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 95,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;3",
+              "type": "INT8",
+              "scales": 64,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 15,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;1",
+              "type": "INT32",
+              "scales": 64,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 366,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 231,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 301,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 93,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 14,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 370,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_16/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 234,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 372,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 92,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 13,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 373,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 237,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 375,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 91,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 12,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 376,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_0/torch.nn.modules.conv.Conv2d_2;6",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 240,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 321,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_18/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 89,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 11,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 379,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.conv.Conv_19/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 243,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 381,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 88,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 10,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 382,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 246,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 384,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 87,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 9,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 385,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_1/torch.nn.modules.conv.Conv2d_2;6",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 249,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 341,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 85,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 8,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 388,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;;ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 252,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 390,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_0/torch.nn.modules.activation.SiLU_act;3",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 84,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 7,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 391,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.conv.Conv2d_conv;5",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 255,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 393,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/ultralytics.nn.modules.conv.Conv_1/torch.nn.modules.activation.SiLU_act;1",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 83,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;2",
+              "type": "INT8",
+              "scales": 80,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 6,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;",
+              "type": "INT32",
+              "scales": 80,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 394,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/torch.nn.modules.container.Sequential_2/torch.nn.modules.conv.Conv2d_2;6",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        },
+        {
+          "subgraph": 0,
+          "index": 264,
+          "operation": "CONV_2D",
+          "inputs": [
+            {
+              "index": 400,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl;4",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 79,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl/torch.nn.modules.conv.Conv2d_conv;",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            },
+            {
+              "index": 152,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl/torch.nn.modules.conv.Conv2d_conv;1",
+              "type": "INT32",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "outputs": [
+            {
+              "index": 401,
+              "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22/ultralytics.nn.modules.block.DFL_dfl/torch.nn.modules.conv.Conv2d_conv;2",
+              "type": "INT8",
+              "scales": 1,
+              "quantized_dimension": 0
+            }
+          ],
+          "int8_weights": true,
+          "int8_activations": true
+        }
+      ]
+    },
+    "operators_with_float32_io_excluding_conversion_boundaries": [],
+    "quantize_dequantize_boundaries": [
+      {
+        "subgraph": 0,
+        "index": 0,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 0,
+            "name": "serving_default_args_0",
+            "type": "FLOAT32",
+            "scales": 0,
+            "quantized_dimension": null
+          }
+        ],
+        "outputs": [
+          {
+            "index": 415,
+            "name": "serving_default_args_0_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 22,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 171,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 416,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;3_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 23,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 179,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 417,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_2;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 51,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 191,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 418,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 52,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 198,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 419,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4/ultralytics.nn.modules.block.Bottleneck_0;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 53,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 206,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 420,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_4;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 81,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 218,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 421,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 82,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 225,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 422,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.block.Bottleneck_0;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 83,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 233,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 423,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 104,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 245,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 425,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 105,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 253,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 426,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_8;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 121,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 237,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 424,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_6/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 139,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 285,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/torch.nn.modules.upsampling.Upsample_13;1",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 428,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/torch.nn.modules.upsampling.Upsample_13;1_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 152,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 290,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 429,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 153,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 297,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 430,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_15;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 162,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 284,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 427,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_12/ultralytics.nn.modules.conv.Conv_cv2/torch.nn.modules.activation.SiLU_act;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 195,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 330,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 431,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21/ultralytics.nn.modules.block.Bottleneck_0/ultralytics.nn.modules.conv.Conv_cv1/torch.nn.modules.conv.Conv2d_conv;2_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 196,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 337,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21;",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 432,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.block.C2f_21;_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 228,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 359,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;12",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 433,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;12_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 229,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 368,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;13",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 434,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;13_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 258,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 378,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;15",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 435,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;15_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 259,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 387,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;16",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 436,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;16_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 277,
+        "operation": "QUANTIZE",
+        "inputs": [
+          {
+            "index": 412,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;28",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 437,
+            "name": "ultralytics.utils.export.engine._NormalizeCoords/ultralytics.nn.tasks.DetectionModel_model/ultralytics.nn.modules.head.Detect_22;28_quantized",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ]
+      },
+      {
+        "subgraph": 0,
+        "index": 279,
+        "operation": "DEQUANTIZE",
+        "inputs": [
+          {
+            "index": 414,
+            "name": "serving_default_output_0_output",
+            "type": "INT8",
+            "scales": 1,
+            "quantized_dimension": 0
+          }
+        ],
+        "outputs": [
+          {
+            "index": 438,
+            "name": "serving_default_output_0_output_dequant",
+            "type": "FLOAT32",
+            "scales": 0,
+            "quantized_dimension": null
+          }
+        ]
+      }
+    ]
+  },
+  "io": {
+    "inputs": [
+      {
+        "name": "serving_default_args_0",
+        "index": 0,
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "dtype": "float32",
+        "quantization": {
+          "scales": [],
+          "zero_points": [],
+          "quantized_dimension": 0,
+          "block_size": 0
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "serving_default_output_0_output_dequant",
+        "index": 438,
+        "shape": [
+          1,
+          84,
+          8400
+        ],
+        "dtype": "float32",
+        "quantization": {
+          "scales": [],
+          "zero_points": [],
+          "quantized_dimension": 0,
+          "block_size": 0
+        }
+      }
+    ]
+  },
+  "python_execution": {
+    "status": "passed",
+    "image_id": 411685
+  }
+}
