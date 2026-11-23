@@ -18,10 +18,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['prepare', 'evaluate'])
     parser.add_argument('--annotations', type=Path, default=Path('annotations/instances_val2017.json'))
-    parser.add_argument('--manifest', type=Path, default=Path('results/manifest_50.json'))
+    parser.add_argument('--manifest', type=Path, default=Path('results/eval_50/manifest_50.json'))
     parser.add_argument('--limit', type=int, default=50, help='0 selects all images')
     parser.add_argument('--predictions', type=Path)
-    parser.add_argument('--output', type=Path, default=Path('results/tflite_fp32_50_metrics.json'))
+    parser.add_argument('--output', type=Path, default=Path('results/eval_50/tflite_fp32_50_metrics.json'))
     args = parser.parse_args()
     if args.limit < 0:
         parser.error('limit must be nonnegative')

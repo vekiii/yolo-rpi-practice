@@ -28,9 +28,9 @@ python tflite_cpp_wrapper/quantize_int8.py \
 Iz PowerShell-a u `D:\yolo_test`, sa postojećim Windows izvršnim fajlom. Ako već imaš rezultate pod ovim prefiksom, izaberi drugi prefiks i odgovarajuća imena za COCO evaluaciju.
 
 ```powershell
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_int8\yolov8n_int8.tflite .\val2017 .\results\manifest_50.json .\results\tflite_int8_50 4 normalized xnnpack
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_int8\yolov8n_int8.tflite .\val2017 .\results\eval_50\manifest_50.json .\results\eval_50\tflite_int8_50 4 normalized xnnpack
 if ($LASTEXITCODE -ne 0) { throw "TFLite C++ izvršavanje nije uspelo" }
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\manifest_50.json --predictions .\results\tflite_int8_50_predictions.json --output .\results\tflite_int8_50_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\eval_50\manifest_50.json --predictions .\results\eval_50\tflite_int8_50_predictions.json --output .\results\eval_50\tflite_int8_50_metrics.json
 ```
 
 ## Dobijeni model i rezultati
@@ -39,7 +39,7 @@ Kalibrator je obradio svih 500 slika. Na prvih pet slika upoređen je WSL Python
 
 Ponovni izvoz iz sačuvanog QSV-a proizveo je identične bajtove modela bez nove kalibracije. SHA-256 izvornog FP32 modela i manifesta ostali su isti.
 
-Model ima 3.483.792 bajta, odnosno 72,87% manje od FP32 modela. SHA-256 je `760da7cfe6da9f4ff46caf9e4ddfe04f242d621c7f11da3273004a51c572d107`. Graf sadrži 356 INT8, 90 INT32 i dva FP32 tenzora. Svih 64 konvolucija imaju INT8 težine i INT8 ulaznu i izlaznu aktivaciju. Kod 63 konvolucije težine imaju više skala, a kod jedne jednu skalu. Aktivacije svih konvolucija imaju po jednu skalu. Graf ima 32 `QUANTIZE` i jedan `DEQUANTIZE` operator. FP32 tip se pojavljuje samo na ulaznoj i izlaznoj granici. Detaljan pregled je u [inspection.json](models/tflite_int8/inspection.json).
+Model ima 3.483.792 bajta, odnosno 72,87% manje od FP32 modela. SHA-256 je `760da7cfe6da9f4ff46caf9e4ddfe04f242d621c7f11da3273004a51c572d107`. Graf sadrži 356 INT8, 90 INT32 i dva FP32 tenzora. Svih 64 konvolucija imaju INT8 težine i INT8 ulaznu i izlaznu aktivaciju. Kod 63 konvolucije težine imaju više skala, a kod jedne jednu skalu. Aktivacije svih konvolucija imaju po jednu skalu. Graf ima 32 `QUANTIZE` i jedan `DEQUANTIZE` operator. FP32 tip se pojavljuje samo na ulaznoj i izlaznoj granici. Detaljan pregled je u [inspection.json](../../models/tflite_int8/inspection.json).
 
 Windows TFLite C++ 2.20.0 sa XNNPACK-om i četiri niti obradio je istih 50 slika istim redosledom kao sačuvana FP32 referenca.
 
@@ -51,4 +51,4 @@ Windows TFLite C++ 2.20.0 sa XNNPACK-om i četiri niti obradio je istih 50 slika
 | Prosečan inference, ms/slika | 85,432 | 70,550 | −17,42% |
 | Prosečna ukupna obrada, ms/slika | 95,221 | 84,636 | −11,12% |
 
-Tabela poredi dva sačuvana prolaza. Ukupno vreme uključuje učitavanje slike. Pad tačnosti je zabeležen uz isti recept i bez posebnih izuzetaka za detekcionu glavu. Izvori su [COCO metrike](results/tflite_int8_50_metrics.json), [vremena](results/tflite_int8_50_timing.json), [predikcije](results/tflite_int8_50_predictions.json), [Windows log](results/tflite_int8_50_windows.log) i [log konverzije](results/tflite_int8_conversion.log).
+Tabela poredi dva sačuvana prolaza. Ukupno vreme uključuje učitavanje slike. Pad tačnosti je zabeležen uz isti recept i bez posebnih izuzetaka za detekcionu glavu. Izvori su [COCO metrike](../../results/eval_50/tflite_int8_50_metrics.json), [vremena](../../results/eval_50/tflite_int8_50_timing.json), [predikcije](../../results/eval_50/tflite_int8_50_predictions.json), [Windows log](../../results/eval_50/tflite_int8_50_windows.log) i [log konverzije](../../results/eval_50/tflite_int8_conversion.log).

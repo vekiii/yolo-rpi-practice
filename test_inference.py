@@ -13,7 +13,7 @@ def main():
             f"Nema JPG slika u folderu: {images_dir}"
         )
 
-    model = YOLO("yolov8n.pt")
+    model = YOLO(str(project_dir / "models" / "yolov8n.pt"))
 
     model.predict(
         source=str(image_path),

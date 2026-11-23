@@ -70,7 +70,7 @@ import json
 import tarfile
 from pathlib import Path
 
-manifest = json.loads(Path('results/manifest_50.json').read_text(encoding='utf-8'))
+manifest = json.loads(Path('results/eval_50/manifest_50.json').read_text(encoding='utf-8'))
 
 def exclude_build(info):
     if any(p in {'build', 'build-rpi', '__pycache__', '.git'} for p in Path(info.name).parts):
@@ -80,7 +80,7 @@ def exclude_build(info):
 with tarfile.open('rpi_test_50.tar.gz', 'w:gz') as archive:
     archive.add('tflite_cpp_wrapper', filter=exclude_build)
     archive.add('models/tflite_fp32')
-    archive.add('results/manifest_50.json')
+    archive.add('results/eval_50/manifest_50.json')
     for image in manifest['images']:
         archive.add(Path('val2017') / image['file_name'])
 print('Paket je napravljen; broj slika:', len(manifest['images']))
@@ -207,16 +207,16 @@ cd ~/yolo_test
 python3 - <<'PY'
 import json
 from pathlib import Path
-m = json.loads(Path('results/manifest_50.json').read_text())
+m = json.loads(Path('results/eval_50/manifest_50.json').read_text())
 m['images'] = m['images'][:1]
-Path('results/manifest_1.json').write_text(json.dumps(m, indent=2))
+Path('results/eval_50/manifest_1.json').write_text(json.dumps(m, indent=2))
 PY
 ```
 
 ```bash
 ./tflite_cpp_wrapper/build-rpi/bin/yolo_tflite \
   models/tflite_fp32/yolov8n_fp32.tflite \
-  val2017 results/manifest_1.json results/rpi_tflite_fp32_1 \
+  val2017 results/eval_50/manifest_1.json results/eval_50/rpi_tflite_fp32_1 \
   4 normalized xnnpack
 ```
 
@@ -225,7 +225,7 @@ Ako prođe:
 ```bash
 ./tflite_cpp_wrapper/build-rpi/bin/yolo_tflite \
   models/tflite_fp32/yolov8n_fp32.tflite \
-  val2017 results/manifest_50.json results/rpi_tflite_fp32_50 \
+  val2017 results/eval_50/manifest_50.json results/eval_50/rpi_tflite_fp32_50 \
   4 normalized xnnpack
 ```
 
@@ -234,9 +234,9 @@ Potvrđeni oblici: ulaz `[1,3,640,640]`, izlaz `[1,84,8400]`. Pet zagrevajućih 
 **Windows PowerShell, iz `D:\yolo_test`:**
 
 ```powershell
-scp veki@veki.local:~/yolo_test/results/rpi_tflite_fp32_50_predictions.json .\results\
-scp veki@veki.local:~/yolo_test/results/rpi_tflite_fp32_50_timing.json .\results\
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/manifest_50.json --predictions results/rpi_tflite_fp32_50_predictions.json --output results/rpi_tflite_fp32_50_metrics.json
+scp veki@veki.local:~/yolo_test/results/eval_50/rpi_tflite_fp32_50_predictions.json .\results\eval_50\
+scp veki@veki.local:~/yolo_test/results/eval_50/rpi_tflite_fp32_50_timing.json .\results\eval_50\
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/eval_50/manifest_50.json --predictions results/eval_50/rpi_tflite_fp32_50_predictions.json --output results/eval_50/rpi_tflite_fp32_50_metrics.json
 ```
 
 Potvrđena evaluacija na RPi rezultatima: mAP50–95 `0,410`, mAP50 `0,552`, AP75 `0,454`, do prikazane preciznosti jednako laptopu. COCO anotacije i Python evaluacija ostaju na laptopu.
@@ -251,7 +251,8 @@ Ako ceo dataset već postoji na RPi-ju, ne prenosi ga ponovo.
 cd D:\yolo_test
 tar -cf val2017.tar val2017
 scp .\val2017.tar veki@veki.local:~/yolo_test/
-scp .\results\manifest_5000.json veki@veki.local:~/yolo_test/results/
+ssh veki@veki.local "mkdir -p ~/yolo_test/results/eval_5000"
+scp .\results\eval_5000\manifest_5000.json veki@veki.local:~/yolo_test/results/eval_5000/
 ```
 
 **RPi:**
@@ -263,7 +264,7 @@ find val2017 -type f -name '*.jpg' | wc -l
 
 ./tflite_cpp_wrapper/build-rpi/bin/yolo_tflite \
   models/tflite_fp32/yolov8n_fp32.tflite \
-  val2017 results/manifest_5000.json results/rpi_tflite_fp32_5000 \
+  val2017 results/eval_5000/manifest_5000.json results/eval_5000/rpi_tflite_fp32_5000 \
   4 normalized xnnpack
 ```
 
@@ -272,9 +273,9 @@ Očekuje se 5.000 slika. Raspakivanje prepisuje prvih 50 istim fajlovima. Drži 
 **Windows PowerShell:**
 
 ```powershell
-scp veki@veki.local:~/yolo_test/results/rpi_tflite_fp32_5000_predictions.json .\results\
-scp veki@veki.local:~/yolo_test/results/rpi_tflite_fp32_5000_timing.json .\results\
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/manifest_5000.json --predictions results/rpi_tflite_fp32_5000_predictions.json --output results/rpi_tflite_fp32_5000_metrics.json
+scp veki@veki.local:~/yolo_test/results/eval_5000/rpi_tflite_fp32_5000_predictions.json .\results\eval_5000\
+scp veki@veki.local:~/yolo_test/results/eval_5000/rpi_tflite_fp32_5000_timing.json .\results\eval_5000\
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/eval_5000/manifest_5000.json --predictions results/eval_5000/rpi_tflite_fp32_5000_predictions.json --output results/eval_5000/rpi_tflite_fp32_5000_metrics.json
 ```
 
 Ovo su komande pune evaluacije, ne tvrdnja da je njen konačni rezultat već zabeležen u ovom uputstvu. Sačuvaj predictions, timing i metrics fajlove. Za ponovljena merenja promeni izlazni prefiks da prethodni prolaz ne bude prepisan.

@@ -1,6 +1,6 @@
 # YOLOv8n — TFLite C++ wrapper: kompletno uputstvo
 
-Ovo uputstvo objedinjuje konačne korake korišćene za uspešan izvoz, Windows build i COCO evaluaciju. Ne sadrži neuspešne pokušaje. Podrazumeva raspakovan paket `tflite_cpp_wrapper`, postojeći `yolov8n.pt`, COCO slike i anotacije u projektu `D:\yolo_test`.
+Ovo uputstvo objedinjuje konačne korake korišćene za uspešan izvoz, Windows build i COCO evaluaciju. Ne sadrži neuspešne pokušaje. Podrazumeva raspakovan paket `tflite_cpp_wrapper`, postojeći `models/yolov8n.pt`, COCO slike i anotacije u projektu `D:\yolo_test`.
 
 ## 1. Okruženja i uloge
 
@@ -20,10 +20,10 @@ U Windowsu su potrebni Git, CMake i Visual Studio Build Tools sa C++ x64 kompajl
 
 U projektu treba da postoje:
 
-- `yolov8n.pt` — početni checkpoint;
+- `models/yolov8n.pt` — početni checkpoint;
 - `tflite_cpp_wrapper/` — CMakeLists.txt, main.cpp, export_fp32.py, requirements-export.txt i coco_tools.py;
 - `val2017/` i `annotations/` — COCO dataset;
-- `results/manifest_50.json` i `results/manifest_5000.json` — isti manifesti kao u prethodnom eksperimentu;
+- `results/eval_50/manifest_50.json` i `results/eval_5000/manifest_5000.json` — isti manifesti kao u prethodnom eksperimentu;
 - `.venv/` — postojeće Windows Python okruženje za evaluaciju.
 
 Obezbediti prostor i na C: i na D:. WSL venv i privremeni fajlovi nisu automatski na D: samo zato što se projekat nalazi na D:.
@@ -146,7 +146,7 @@ Izvoz je potvrđen porukom `LiteRT: export success`. Skripta zatim ispisuje meta
 
 Windows fajlovi:
 
-- `D:\yolo_test\yolov8n.tflite` — izlaz izvoznika;
+- `D:\yolo_test\models\tflite_fp32\yolov8n.tflite` — izlaz izvoznika;
 - `D:\yolo_test\models\tflite_fp32\yolov8n_fp32.tflite` — kopija za wrapper;
 - prateći fajlovi koje skripta napravi u `models/tflite_fp32/` — sačuvati radi evidencije izvoza.
 
@@ -315,7 +315,7 @@ Usage: yolo_tflite MODEL.tflite IMAGES MANIFEST OUTPUT_PREFIX THREADS normalized
 Koristiti postojeći manifest da izbor slika ostane isti kao u PyTorch eksperimentu.
 
 ```powershell
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\manifest_50.json .\results\tflite_fp32_50 4 normalized xnnpack
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\eval_50\manifest_50.json .\results\eval_50\tflite_fp32_50 4 normalized xnnpack
 ```
 
 Poslednji argumenti: četiri niti, normalizovane bbox koordinate i XNNPACK CPU backend.
@@ -323,7 +323,7 @@ Poslednji argumenti: četiri niti, normalizovane bbox koordinate i XNNPACK CPU b
 Evaluaciju pokrenuti Windows Python-om iz postojećeg projekta:
 
 ```powershell
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\manifest_50.json --predictions .\results\tflite_fp32_50_predictions.json --output .\results\tflite_fp32_50_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\eval_50\manifest_50.json --predictions .\results\eval_50\tflite_fp32_50_predictions.json --output .\results\eval_50\tflite_fp32_50_metrics.json
 ```
 
 Potvrđeni zaokruženi rezultati: mAP50–95 `0.410`, mAP50 `0.552`, AP75 `0.454`. Prethodna PyTorch referenca za mAP50–95 bila je `0.4104`.
@@ -331,13 +331,13 @@ Potvrđeni zaokruženi rezultati: mAP50–95 `0.410`, mAP50 `0.552`, AP75 `0.454
 ## 12. Inferenca i evaluacija na svih 5.000 slika
 
 ```powershell
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\manifest_5000.json .\results\tflite_fp32_5000 4 normalized xnnpack
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\eval_5000\manifest_5000.json .\results\eval_5000\tflite_fp32_5000 4 normalized xnnpack
 ```
 
 Po završetku:
 
 ```powershell
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\manifest_5000.json --predictions .\results\tflite_fp32_5000_predictions.json --output .\results\tflite_fp32_5000_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest .\results\eval_5000\manifest_5000.json --predictions .\results\eval_5000\tflite_fp32_5000_predictions.json --output .\results\eval_5000\tflite_fp32_5000_metrics.json
 ```
 
 Sačuvati predictions, metrics i timing fajlove u `results/`, model i metapodatke izvoza. Pri ponavljanju promeniti OUTPUT_PREFIX i metrics izlaz ako treba sačuvati prethodni prolaz.

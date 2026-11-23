@@ -149,15 +149,15 @@ Ulaz ostaje `[1,3,640,640]`, izlaz `[1,84,8400]`, FP32. U izveštaju numerička 
 
 ```powershell
 cd D:\yolo_test
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp16_weights\yolov8n_fp16_weights.tflite .\val2017 .\results\manifest_50.json .\results\tflite_fp16_weights_50 4 normalized xnnpack
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp16_weights\yolov8n_fp16_weights.tflite .\val2017 .\results\eval_50\manifest_50.json .\results\eval_50\tflite_fp16_weights_50 4 normalized xnnpack
 ```
 
 Koristi se već napravljeni wrapper, bez ponovne kompilacije. Parametri ostaju isti kao za FP32: CPU, četiri niti, XNNPACK, 640×640, batch 1, confidence 0,001, NMS IoU 0,7, maksimalno 100 detekcija i pet zagrevajućih prolaza izuzetih iz merenja.
 
 Nastaju:
 
-- `results/tflite_fp16_weights_50_predictions.json`;
-- `results/tflite_fp16_weights_50_timing.json`.
+- `results/eval_50/tflite_fp16_weights_50_predictions.json`;
+- `results/eval_50/tflite_fp16_weights_50_timing.json`.
 
 Ponovno korišćenje istog prefiksa prepisuje prethodne rezultate inferencije; za novi prolaz promeni prefiks, npr. `tflite_fp16_weights_50_run2`.
 
@@ -166,7 +166,7 @@ Ponovno korišćenje istog prefiksa prepisuje prethodne rezultate inferencije; z
 **Windows PowerShell:**
 
 ```powershell
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/manifest_50.json --predictions results/tflite_fp16_weights_50_predictions.json --output results/tflite_fp16_weights_50_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/eval_50/manifest_50.json --predictions results/eval_50/tflite_fp16_weights_50_predictions.json --output results/eval_50/tflite_fp16_weights_50_metrics.json
 ```
 
 Anotacije su u `annotations/instances_val2017.json`; skripta podrazumevano koristi tu putanju. Izbor slika je postojeći manifest, isti kao u FP32 proveri.
@@ -189,11 +189,11 @@ Ovo je uspešna provera na 50 slika, ne konačan mAP za ceo dataset. Iz vremena 
 Ove komande su pripremljen nastavak, ne već potvrđeni rezultat:
 
 ```powershell
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp16_weights\yolov8n_fp16_weights.tflite .\val2017 .\results\manifest_5000.json .\results\tflite_fp16_weights_5000 4 normalized xnnpack
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp16_weights\yolov8n_fp16_weights.tflite .\val2017 .\results\eval_5000\manifest_5000.json .\results\eval_5000\tflite_fp16_weights_5000 4 normalized xnnpack
 ```
 
 ```powershell
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/manifest_5000.json --predictions results/tflite_fp16_weights_5000_predictions.json --output results/tflite_fp16_weights_5000_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/eval_5000/manifest_5000.json --predictions results/eval_5000/tflite_fp16_weights_5000_predictions.json --output results/eval_5000/tflite_fp16_weights_5000_metrics.json
 ```
 
 Sačuvaj originalni FP32 model, FP16 model, conversion JSON (uključujući hash vrednosti), korišćenu Python skriptu i predictions/timing/metrics fajlove. FP32 laptop referenca na svih 5.000 slika je mAP50–95 `0,365712`; poređenje pune FP16 tačnosti radi se tek kada puna evaluacija bude završena.

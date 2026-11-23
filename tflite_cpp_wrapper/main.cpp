@@ -69,19 +69,52 @@ static std::vector<Detection> decode(const float* data,bool features_first,bool 
  return keep;
 }
 static std::vector<int> shape(const TfLiteTensor*t){return {t->dims->data,t->dims->data+t->dims->size};}
+static std::string graph_dtype(const tflite::Tensor& tensor) {
+ const char* name = tflite::EnumNameTensorType(tensor.type());
+ return *name ? name : "UNKNOWN_" + std::to_string(static_cast<int>(tensor.type()));
+}
+
 static json precision_metadata(const tflite::Model& graph, const TfLiteTensor& input,
                                const TfLiteTensor& output) {
- std::map<std::string, size_t> tensor_counts;
+ std::map<std::string, size_t> tensor_counts, weight_counts;
  for (const auto* subgraph : *graph.subgraphs()) {
-  if (!subgraph->tensors()) continue;
-  for (const auto* tensor : *subgraph->tensors()) {
-   const char* name = tflite::EnumNameTensorType(tensor->type());
-   ++tensor_counts[*name ? name : "UNKNOWN_" + std::to_string(static_cast<int>(tensor->type()))];
+  const auto* tensors = subgraph->tensors();
+  if (!tensors) continue;
+  for (const auto* tensor : *tensors) ++tensor_counts[graph_dtype(*tensor)];
+  if (!subgraph->operators()) continue;
+
+  std::map<int, int> dequantized_from;
+  for (const auto* op : *subgraph->operators()) {
+   auto code = graph.operator_codes()->Get(op->opcode_index())->builtin_code();
+   if (code == tflite::BuiltinOperator_DEQUANTIZE && op->inputs() && op->outputs() &&
+       op->inputs()->size() == 1 && op->outputs()->size() == 1) {
+    dequantized_from[op->outputs()->Get(0)] = op->inputs()->Get(0);
+   }
+  }
+  for (const auto* op : *subgraph->operators()) {
+   auto code = graph.operator_codes()->Get(op->opcode_index())->builtin_code();
+   if (code != tflite::BuiltinOperator_CONV_2D &&
+       code != tflite::BuiltinOperator_DEPTHWISE_CONV_2D &&
+       code != tflite::BuiltinOperator_FULLY_CONNECTED &&
+       code != tflite::BuiltinOperator_TRANSPOSE_CONV) continue;
+   if (!op->inputs() || op->inputs()->size() < 2) continue;
+   int weight_index = op->inputs()->Get(1);
+   // FP16 storage can feed an FP32 operator through DEQUANTIZE.
+   auto source = dequantized_from.find(weight_index);
+   if (source != dequantized_from.end()) weight_index = source->second;
+   if (weight_index < 0 || static_cast<size_t>(weight_index) >= tensors->size()) continue;
+   const auto* weight = tensors->Get(weight_index);
+   if (!graph.buffers() || weight->buffer() >= graph.buffers()->size()) continue;
+   const auto* buffer = graph.buffers()->Get(weight->buffer());
+   if ((buffer->data() && buffer->data()->size()) || buffer->size()) {
+    ++weight_counts[graph_dtype(*weight)];
+   }
   }
  }
  return {
   {"input_dtype", TfLiteTypeGetName(input.type)},
   {"output_dtype", TfLiteTypeGetName(output.type)},
+  {"weight_storage_dtype_counts", weight_counts},
   {"graph_tensor_counts_by_type", tensor_counts},
   {"runtime_kernel_precision", {{"status", "not_profiled"}}}
  };

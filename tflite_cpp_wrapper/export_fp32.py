@@ -11,13 +11,13 @@ from pathlib import Path
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--weights', type=Path, default=Path('yolov8n.pt'))
+    p.add_argument('--weights', type=Path, default=Path('models/yolov8n.pt'))
     p.add_argument('--output', type=Path, default=Path('models/tflite_fp32/yolov8n_fp32.tflite'))
     args = p.parse_args()
     if platform.system() == 'Windows':
         p.error('Current Ultralytics LiteRT exporter requires Linux x86_64 or macOS. Use WSL Ubuntu or Colab CPU. C++ inference itself runs on Windows.')
     if not args.weights.is_file():
-        p.error('Original weights file not found; supply the existing yolov8n.pt')
+        p.error('Original weights file not found; supply the existing models/yolov8n.pt')
     if args.output.exists():
         p.error('Output already exists; choose a new output path to avoid overwriting results')
     from ultralytics import YOLO

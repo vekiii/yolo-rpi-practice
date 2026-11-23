@@ -17,7 +17,7 @@ python -m pip install -r tflite_cpp_wrapper/requirements-export.txt
 python tflite_cpp_wrapper/export_fp32.py
 ```
 
-If venv is unavailable on Ubuntu: `sudo apt install python3-venv` first. Use a Python version supported by current exporter dependencies; Python 3.11/3.12 is a practical starting point. WSL accesses Windows project files directly. Colab users upload the original yolov8n.pt and export_fp32.py, install requirements, run the script, then download the entire models/tflite_fp32 output directory.
+If venv is unavailable on Ubuntu: `sudo apt install python3-venv` first. Use a Python version supported by current exporter dependencies; Python 3.11/3.12 is a practical starting point. WSL accesses Windows project files directly. Colab users upload the original models/yolov8n.pt and export_fp32.py, install requirements, run the script, then download the entire models/tflite_fp32 output directory.
 
 Expected outputs:
 - models/tflite_fp32/yolov8n_fp32.tflite
@@ -45,8 +45,8 @@ Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py prepare
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\manifest_50.json .\results\tflite_fp32_50 4 normalized xnnpack
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --predictions results/tflite_fp32_50_predictions.json
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\eval_50\manifest_50.json .\results\eval_50\tflite_fp32_50 4 normalized xnnpack
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --predictions results/eval_50/tflite_fp32_50_predictions.json
 ```
 
 Compare against Python's 50-image mAP50-95 0.4104 and mAP50 0.5524. Similar aggregate metrics support correct conversion/decoding but do not prove bitwise identical predictions. If metrics collapse, check contract, layouts, coordinate units, class mapping and preprocessing BEFORE full evaluation.
@@ -56,9 +56,9 @@ Explicit XNNPACK CPU delegate, four threads, no forced FP16. Unsupported nodes c
 ## 4. Full 5,000-image run after correctness check
 
 ```powershell
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py prepare --limit 0 --manifest results/manifest_5000.json
-.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\manifest_5000.json .\results\tflite_fp32_5000 4 normalized xnnpack
-.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/manifest_5000.json --predictions results/tflite_fp32_5000_predictions.json --output results/tflite_fp32_5000_metrics.json
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py prepare --limit 0 --manifest results/eval_5000/manifest_5000.json
+.\tflite_cpp_wrapper\build\bin\yolo_tflite.exe .\models\tflite_fp32\yolov8n_fp32.tflite .\val2017 .\results\eval_5000\manifest_5000.json .\results\eval_5000\tflite_fp32_5000 4 normalized xnnpack
+.\.venv\Scripts\python.exe .\tflite_cpp_wrapper\coco_tools.py evaluate --manifest results/eval_5000/manifest_5000.json --predictions results/eval_5000/tflite_fp32_5000_predictions.json --output results/eval_5000/tflite_fp32_5000_metrics.json
 ```
 
 Reference Python/PyTorch full-set mAP50-95: 0.3657. Repeat latency measurements under fixed power/thermal/background-load conditions before drawing speed conclusions.
@@ -67,7 +67,7 @@ Reference Python/PyTorch full-set mAP50-95: 0.3657. Repeat latency measurements 
 
 - PREFIX_predictions.json: COCO detection results (overwritten on same prefix).
 - PREFIX_timing.json: model bytes, runtime version, backend, threads, layouts, coordinate units, per-image timings and mean timings.
-- In evaluation and benchmark JSON, `precision` is an object. `input_dtype` and `output_dtype` come from the interpreter. `graph_tensor_counts_by_type` counts declared tensors across all subgraphs in the model file, including constants. These counts describe the graph. `runtime_kernel_precision.status` is `not_profiled` because the wrapper does not profile kernel arithmetic. Older JSON files may contain a fixed string in `precision`.
+- In evaluation and benchmark JSON, `precision` is an object. `input_dtype` and `output_dtype` come from the interpreter. `weight_storage_dtype_counts` groups stored weights by dtype for convolution and fully connected operators. For weights fed through `DEQUANTIZE`, it records the type in the model file before conversion. `graph_tensor_counts_by_type` counts all declared tensors. `runtime_kernel_precision.status` is `not_profiled`.
 - Metrics JSON from coco_tools.py; limit=0 selects the entire validation set.
 - Five warmup invocations, excluded. One image at a time, 640x640 square letterbox, RGB /255, padding 114, OpenCV linear resize.
 - Best class per anchor, confidence >=.001, class-aware NMS at .7 IoU, cap 100 detections, clip boxes after NMS. Rounding uses nearbyint (nearest-even under default rounding).
