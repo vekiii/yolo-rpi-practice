@@ -13,7 +13,7 @@ python -u tflite_cpp_wrapper/quantize_int8.py
 
 Koriste se postojeći Ultralytics 8.4.208, litert-torch 0.10.0, ai-edge-litert 2.3.0 i ai-edge-quantizer 0.10.1. Skripta uzima svih 500 stavki manifesta po njegovom redosledu, proverava izbor, presek sa val2017, dekodiranje, dimenzije i hash vrednosti. Preprocessing prati `prepare()` iz wrappera: FP32 računanje odnosa, zaokruživanje na parno, linearni resize, letterbox sa vrednošću 114, BGR u RGB, deljenje sa 255 i NCHW. Privremeni ulazni tenzori koriste oko 2,46 GB prostora na disku. Kvantizator 0.10.1 prvo enumerira ulaze da izbroji posao, zatim prolazi kroz njih radi kalibracije. Prvi prolaz dobija poglede u memorijski mapiranu datoteku.
 
-Direktni poziv prati instalirani Ultralytics `quantize=8`: `static_wi8_ai8()`, algoritam `min_max_uniform_quantize`, `CALIBRATION_PROFILER_BASED` sa 16 niti i `NO_QUANTIZE` za `INPUT` i `OUTPUT`. Profiler prati minimum i maksimum aktivacija. Recept traži simetrične INT8 težine po kanalu i asimetrične INT8 aktivacije po tenzoru za podržane operacije. Instalirani API nudi i režim `CALIBRATION_PRESERVE_ALL_TENSORS`. Popis stvarnih tipova po operatorima i granice konverzije zapisani su u `inspection.json`. Pokrivenost konvolucija opisuje tipove tenzora u grafu. Preciznost pojedinačnih delova detekcione glave i izvršavanje pojedinačnih kernela preko XNNPACK-a zahtevaju zasebnu analizu.
+Direktni poziv prati instalirani Ultralytics `quantize=8`: `static_wi8_ai8()`, algoritam `min_max_uniform_quantize`, `CALIBRATION_PROFILER_BASED` sa 16 niti i `NO_QUANTIZE` za `INPUT` i `OUTPUT`. Profiler meri minimum i maksimum aktivacija po tenzoru za svaku sliku. Kalibrator spaja opsege metodom **EMA min–max sa faktorom 0,95**. Prva izmerena vrednost inicijalizuje opseg, a svaka naredna ažurira minimum i maksimum zasebno kao `0.95 * prethodna + 0.05 * nova`. Recept traži simetrične INT8 težine po kanalu i asimetrične INT8 aktivacije po tenzoru za podržane operacije. Instalirani API nudi i režim `CALIBRATION_PRESERVE_ALL_TENSORS`. Popis stvarnih tipova po operatorima i granice konverzije zapisani su u `inspection.json`. Pokrivenost konvolucija opisuje tipove tenzora u grafu. Preciznost pojedinačnih delova detekcione glave i izvršavanje pojedinačnih kernela preko XNNPACK-a zahtevaju zasebnu analizu.
 
 Izlazi u `models/tflite_int8/` su `yolov8n_int8.tflite`, `calibration_qsv.json`, `recipe.json` i `inspection.json`. QSV se čuva u formatu koji podržava `load_calibration_results()`. Za ponovno kvantizovanje sa istim modelom, manifestom i postavkama koristi novi izlazni direktorijum.
 
@@ -43,7 +43,7 @@ Model ima 3.483.792 bajta, odnosno 72,87% manje od FP32 modela. SHA-256 je `760d
 
 Windows TFLite C++ 2.20.0 sa XNNPACK-om i četiri niti obradio je istih 50 slika istim redosledom kao sačuvana FP32 referenca.
 
-| Metrika | FP32 | INT8 sa FP32 ulazom/izlazom | Promena |
+| Metrika | FP32 | INT8 (EMA min–max, 0,95), FP32 ulaz/izlaz | Promena |
 |---|---:|---:|---:|
 | mAP50–95 | 0,410426 | 0,339151 | −7,13 procentnih poena |
 | mAP50 | 0,552408 | 0,522214 | −3,02 procentna poena |
