@@ -144,7 +144,24 @@ def inspect_graph(path):
     }
 
 
-def run(output, reuse_qsv, threads):
+def calibrate_qsv(qt, dataset, threads, mode, aggregation):
+    if aggregation == "ema":
+        return qt.calibrate(dataset, num_threads=threads, mode=mode)
+
+    from ai_edge_quantizer import calibrator, recipe_manager
+    from ai_edge_quantizer.utils import qsv_utils
+
+    # Quantizer.calibrate() uses the default merger. The Calibrator factory
+    # accepts a custom merger with the same profiler and recipe.
+    manager = recipe_manager.RecipeManager()
+    manager.load_quantization_recipe(qt.get_quantization_recipe())
+    profiler = calibrator.Calibrator(str(SOURCE), num_threads=threads, mode=mode,
+                                     qsv_update_func=qsv_utils.min_max_update)
+    profiler.calibrate(dataset, manager)
+    return profiler.get_model_qsvs()
+
+
+def run(output, reuse_qsv, threads, aggregation="ema"):
     from ai_edge_litert.interpreter import Interpreter
     from ai_edge_quantizer import calibrator, qtyping, quantizer, recipe
     from ai_edge_quantizer.utils import calibration_utils
@@ -187,6 +204,12 @@ def run(output, reuse_qsv, threads):
         "recipe": "recipe.static_wi8_ai8() + NO_QUANTIZE for INPUT and OUTPUT",
         "mode": mode.name, "threads": threads, "signature": signature, "signature_input": input_key,
     }
+    if aggregation == "global_minmax":
+        ema_report = json.loads((OUTPUT / "inspection.json").read_text(encoding="utf-8"))
+        if ema_report["provenance"] != provenance or ema_report["num_samples_calibrated"] != COUNT:
+            raise ValueError("Calibration inputs or settings differ from the saved EMA experiment")
+        provenance["qsv_aggregation"] = "global_minmax"
+        provenance["qsv_update_function"] = "ai_edge_quantizer.utils.qsv_utils.min_max_update"
     output.mkdir(parents=True, exist_ok=False)
     qsv_path = output / "calibration_qsv.json"
     if reuse_qsv:
@@ -203,7 +226,7 @@ def run(output, reuse_qsv, threads):
             fill_inputs(records, ROOT, storage)
             storage.flush()
             inputs = CalibrationInputs(storage, input_key)
-            qsvs = qt.calibrate({signature: inputs}, num_threads=threads, mode=mode)
+            qsvs = calibrate_qsv(qt, {signature: inputs}, threads, mode, aggregation)
             if inputs.pass_counts != [COUNT, COUNT] or not qsvs:
                 raise RuntimeError(f"Unexpected calibration dataset consumption: {inputs.pass_counts}")
             metadata = dict(num_samples_calibrated=inputs.pass_counts[1], provenance=provenance)
@@ -238,15 +261,15 @@ def run(output, reuse_qsv, threads):
     print(f"Created {model} ({model.stat().st_size} bytes)", flush=True)
 
 
-def main():
+def main(default_output=OUTPUT, aggregation="ema"):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=OUTPUT, help="New directory; must not exist")
+    parser.add_argument("--output-dir", type=Path, default=default_output, help="New directory; must not exist")
     parser.add_argument("--reuse-qsv", type=Path, help="Reuse a matching calibration_qsv.json")
     parser.add_argument("--threads", type=int, default=16, help="Calibration and Python check threads")
     args = parser.parse_args()
     if args.threads < 1:
         parser.error("Expected a positive thread count")
-    run(args.output_dir, args.reuse_qsv, args.threads)
+    run(args.output_dir, args.reuse_qsv, args.threads, aggregation)
 
 
 if __name__ == "__main__":

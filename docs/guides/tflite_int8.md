@@ -52,3 +52,24 @@ Windows TFLite C++ 2.20.0 sa XNNPACK-om i četiri niti obradio je istih 50 slika
 | Prosečna ukupna obrada, ms/slika | 95,221 | 84,636 | −11,12% |
 
 Tabela poredi dva sačuvana prolaza. Ukupno vreme uključuje učitavanje slike. Pad tačnosti je zabeležen uz isti recept i bez posebnih izuzetaka za detekcionu glavu. Izvori su [COCO metrike](../../results/eval_50/tflite_int8_50_metrics.json), [vremena](../../results/eval_50/tflite_int8_50_timing.json), [predikcije](../../results/eval_50/tflite_int8_50_predictions.json), [Windows log](../../results/eval_50/tflite_int8_50_windows.log) i [log konverzije](../../results/eval_50/tflite_int8_conversion.log).
+
+## Kontrolni eksperiment sa globalnim min–max
+
+Koristi se isti FP32 model, preprocesiranje, redosled 500 kalibracionih slika, recept i profiler sa 16 niti kao u EMA prolazu. Skripta proverava ove postavke prema sačuvanom EMA izveštaju. Jedina promena u kalibraciji je funkcija `min_max_update`, koja po tenzoru uzima manji minimum i veći maksimum između prethodnog i novog opsega. Rezultujuće granice su globalni ekstremi izmerenih opsega.
+
+U WSL-u, iz korena projekta:
+
+```bash
+cd /mnt/d/yolo_test
+~/venvs/yolo-tflite-export-py312/bin/python tflite_cpp_wrapper/quantize_int8_global_minmax.py
+```
+
+Novi model, QSV, recept i pregled grafa upisuju se u `models/tflite_int8_global_minmax/`. QSV iz EMA prolaza ne prolazi proveru kompatibilnosti za ovu varijantu.
+
+U Windows PowerShell-u iz `D:\yolo_test`:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tflite_cpp_wrapper\evaluate_int8_global_minmax_50.ps1
+```
+
+Skripta proverava ID-jeve i redosled 50 slika prema EMA evaluaciji. Koristi četiri niti i XNNPACK, a predikcije, vremena i COCO metrike zapisuje pod prefiksom `results/eval_50/tflite_int8_global_minmax_50`.
