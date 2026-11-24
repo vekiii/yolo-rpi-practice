@@ -1,0 +1,408 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="1830">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="sans-serif" font-size="13">
+<text x="12" y="23" font-size="17">Actual COCO class coverage after deduplication</text>
+<text x="12" y="48">ID and category</text>
+<text x="190" y="48">Images containing class</text>
+<text x="650" y="48">Valid instances</text>
+<text x="12" y="70">1 person</text>
+<rect x="190" y="58" width="385.00" height="14" fill="#136e9a"/>
+<text x="580.00" y="70">7660</text>
+<rect x="650" y="58" width="385.00" height="14" fill="#a05019"/>
+<text x="1040.00" y="70">31825</text>
+<text x="12" y="92">2 bicycle</text>
+<rect x="190" y="80" width="26.89" height="14" fill="#136e9a"/>
+<text x="221.89" y="92">535</text>
+<rect x="650" y="80" width="12.76" height="14" fill="#a05019"/>
+<text x="667.76" y="92">1055</text>
+<text x="12" y="114">3 car</text>
+<rect x="190" y="102" width="78.31" height="14" fill="#136e9a"/>
+<text x="273.31" y="114">1558</text>
+<rect x="650" y="102" width="68.52" height="14" fill="#a05019"/>
+<text x="723.52" y="114">5664</text>
+<text x="12" y="136">4 motorcycle</text>
+<rect x="190" y="124" width="19.25" height="14" fill="#136e9a"/>
+<text x="214.25" y="136">383</text>
+<rect x="650" y="124" width="10.95" height="14" fill="#a05019"/>
+<text x="665.95" y="136">905</text>
+<text x="12" y="158">5 airplane</text>
+<rect x="190" y="146" width="12.57" height="14" fill="#136e9a"/>
+<text x="207.57" y="158">250</text>
+<rect x="650" y="146" width="6.10" height="14" fill="#a05019"/>
+<text x="661.10" y="158">504</text>
+<text x="12" y="180">6 bus</text>
+<rect x="190" y="168" width="23.87" height="14" fill="#136e9a"/>
+<text x="218.87" y="180">475</text>
+<rect x="650" y="168" width="8.86" height="14" fill="#a05019"/>
+<text x="663.86" y="180">732</text>
+<text x="12" y="202">7 train</text>
+<rect x="190" y="190" width="15.53" height="14" fill="#136e9a"/>
+<text x="210.53" y="202">309</text>
+<rect x="650" y="190" width="4.48" height="14" fill="#a05019"/>
+<text x="659.48" y="202">370</text>
+<text x="12" y="224">8 truck</text>
+<rect x="190" y="212" width="38.70" height="14" fill="#136e9a"/>
+<text x="233.70" y="224">770</text>
+<rect x="650" y="212" width="14.58" height="14" fill="#a05019"/>
+<text x="669.58" y="224">1205</text>
+<text x="12" y="246">9 boat</text>
+<rect x="190" y="234" width="16.44" height="14" fill="#136e9a"/>
+<text x="211.44" y="246">327</text>
+<rect x="650" y="234" width="11.99" height="14" fill="#a05019"/>
+<text x="666.99" y="246">991</text>
+<text x="12" y="268">10 traffic light</text>
+<rect x="190" y="256" width="26.09" height="14" fill="#136e9a"/>
+<text x="221.09" y="268">519</text>
+<rect x="650" y="256" width="19.32" height="14" fill="#a05019"/>
+<text x="674.32" y="268">1597</text>
+<text x="12" y="290">11 fire hydrant</text>
+<rect x="190" y="278" width="13.32" height="14" fill="#136e9a"/>
+<text x="208.32" y="290">265</text>
+<rect x="650" y="278" width="3.39" height="14" fill="#a05019"/>
+<text x="658.39" y="290">280</text>
+<text x="12" y="312">13 stop sign</text>
+<rect x="190" y="300" width="13.77" height="14" fill="#136e9a"/>
+<text x="208.77" y="312">274</text>
+<rect x="650" y="300" width="3.74" height="14" fill="#a05019"/>
+<text x="658.74" y="312">309</text>
+<text x="12" y="334">14 parking meter</text>
+<rect x="190" y="322" width="10.91" height="14" fill="#136e9a"/>
+<text x="205.91" y="334">217</text>
+<rect x="650" y="322" width="5.14" height="14" fill="#a05019"/>
+<text x="660.14" y="334">425</text>
+<text x="12" y="356">15 bench</text>
+<rect x="190" y="344" width="34.13" height="14" fill="#136e9a"/>
+<text x="229.13" y="356">679</text>
+<rect x="650" y="344" width="14.96" height="14" fill="#a05019"/>
+<text x="669.96" y="356">1237</text>
+<text x="12" y="378">16 bird</text>
+<rect x="190" y="366" width="17.59" height="14" fill="#136e9a"/>
+<text x="212.59" y="378">350</text>
+<rect x="650" y="366" width="14.29" height="14" fill="#a05019"/>
+<text x="669.29" y="378">1181</text>
+<text x="12" y="400">17 cat</text>
+<rect x="190" y="388" width="24.98" height="14" fill="#136e9a"/>
+<text x="219.98" y="400">497</text>
+<rect x="650" y="388" width="6.93" height="14" fill="#a05019"/>
+<text x="661.93" y="400">573</text>
+<text x="12" y="422">18 dog</text>
+<rect x="190" y="410" width="29.30" height="14" fill="#136e9a"/>
+<text x="224.30" y="422">583</text>
+<rect x="650" y="410" width="8.65" height="14" fill="#a05019"/>
+<text x="663.65" y="422">715</text>
+<text x="12" y="444">19 horse</text>
+<rect x="190" y="432" width="14.83" height="14" fill="#136e9a"/>
+<text x="209.83" y="444">295</text>
+<rect x="650" y="432" width="7.79" height="14" fill="#a05019"/>
+<text x="662.79" y="444">644</text>
+<text x="12" y="466">20 sheep</text>
+<rect x="190" y="454" width="11.71" height="14" fill="#136e9a"/>
+<text x="206.71" y="466">233</text>
+<rect x="650" y="454" width="16.19" height="14" fill="#a05019"/>
+<text x="671.19" y="466">1338</text>
+<text x="12" y="488">21 cow</text>
+<rect x="190" y="476" width="12.52" height="14" fill="#136e9a"/>
+<text x="207.52" y="488">249</text>
+<rect x="650" y="476" width="11.25" height="14" fill="#a05019"/>
+<text x="666.25" y="488">930</text>
+<text x="12" y="510">22 elephant</text>
+<rect x="190" y="498" width="11.11" height="14" fill="#136e9a"/>
+<text x="206.11" y="510">221</text>
+<rect x="650" y="498" width="6.38" height="14" fill="#a05019"/>
+<text x="661.38" y="510">527</text>
+<text x="12" y="532">23 bear</text>
+<rect x="190" y="520" width="10.05" height="14" fill="#136e9a"/>
+<text x="205.05" y="532">200</text>
+<rect x="650" y="520" width="3.24" height="14" fill="#a05019"/>
+<text x="658.24" y="532">268</text>
+<text x="12" y="554">24 zebra</text>
+<rect x="190" y="542" width="11.66" height="14" fill="#136e9a"/>
+<text x="206.66" y="554">232</text>
+<rect x="650" y="542" width="7.72" height="14" fill="#a05019"/>
+<text x="662.72" y="554">638</text>
+<text x="12" y="576">25 giraffe</text>
+<rect x="190" y="564" width="12.11" height="14" fill="#136e9a"/>
+<text x="207.11" y="576">241</text>
+<rect x="650" y="564" width="5.93" height="14" fill="#a05019"/>
+<text x="660.93" y="576">490</text>
+<text x="12" y="598">27 backpack</text>
+<rect x="190" y="586" width="41.16" height="14" fill="#136e9a"/>
+<text x="236.16" y="598">819</text>
+<rect x="650" y="586" width="15.67" height="14" fill="#a05019"/>
+<text x="670.67" y="598">1295</text>
+<text x="12" y="620">28 umbrella</text>
+<rect x="190" y="608" width="24.78" height="14" fill="#136e9a"/>
+<text x="219.78" y="620">493</text>
+<rect x="650" y="608" width="15.82" height="14" fill="#a05019"/>
+<text x="670.82" y="620">1308</text>
+<text x="12" y="642">31 handbag</text>
+<rect x="190" y="630" width="53.03" height="14" fill="#136e9a"/>
+<text x="248.03" y="642">1055</text>
+<rect x="650" y="630" width="22.17" height="14" fill="#a05019"/>
+<text x="677.17" y="642">1833</text>
+<text x="12" y="664">32 tie</text>
+<rect x="190" y="652" width="23.27" height="14" fill="#136e9a"/>
+<text x="218.27" y="664">463</text>
+<rect x="650" y="652" width="9.46" height="14" fill="#a05019"/>
+<text x="664.46" y="664">782</text>
+<text x="12" y="686">33 suitcase</text>
+<rect x="190" y="674" width="18.70" height="14" fill="#136e9a"/>
+<text x="213.70" y="686">372</text>
+<rect x="650" y="674" width="10.39" height="14" fill="#a05019"/>
+<text x="665.39" y="686">859</text>
+<text x="12" y="708">34 frisbee</text>
+<rect x="190" y="696" width="12.21" height="14" fill="#136e9a"/>
+<text x="207.21" y="708">243</text>
+<rect x="650" y="696" width="3.56" height="14" fill="#a05019"/>
+<text x="658.56" y="708">294</text>
+<text x="12" y="730">35 skis</text>
+<rect x="190" y="718" width="13.67" height="14" fill="#136e9a"/>
+<text x="208.67" y="730">272</text>
+<rect x="650" y="718" width="7.78" height="14" fill="#a05019"/>
+<text x="662.78" y="730">643</text>
+<text x="12" y="752">36 snowboard</text>
+<rect x="190" y="740" width="12.21" height="14" fill="#136e9a"/>
+<text x="207.21" y="752">243</text>
+<rect x="650" y="740" width="4.94" height="14" fill="#a05019"/>
+<text x="659.94" y="752">408</text>
+<text x="12" y="774">37 sports ball</text>
+<rect x="190" y="762" width="27.34" height="14" fill="#136e9a"/>
+<text x="222.34" y="774">544</text>
+<rect x="650" y="762" width="9.62" height="14" fill="#a05019"/>
+<text x="664.62" y="774">795</text>
+<text x="12" y="796">38 kite</text>
+<rect x="190" y="784" width="11.91" height="14" fill="#136e9a"/>
+<text x="206.91" y="796">237</text>
+<rect x="650" y="784" width="11.75" height="14" fill="#a05019"/>
+<text x="666.75" y="796">971</text>
+<text x="12" y="818">39 baseball bat</text>
+<rect x="190" y="806" width="19.15" height="14" fill="#136e9a"/>
+<text x="214.15" y="818">381</text>
+<rect x="650" y="806" width="6.06" height="14" fill="#a05019"/>
+<text x="661.06" y="818">501</text>
+<text x="12" y="840">40 baseball glove</text>
+<rect x="190" y="828" width="20.00" height="14" fill="#136e9a"/>
+<text x="215.00" y="840">398</text>
+<rect x="650" y="828" width="6.68" height="14" fill="#a05019"/>
+<text x="661.68" y="840">552</text>
+<text x="12" y="862">41 skateboard</text>
+<rect x="190" y="850" width="14.88" height="14" fill="#136e9a"/>
+<text x="209.88" y="862">296</text>
+<rect x="650" y="850" width="5.78" height="14" fill="#a05019"/>
+<text x="660.78" y="862">478</text>
+<text x="12" y="884">42 surfboard</text>
+<rect x="190" y="872" width="13.17" height="14" fill="#136e9a"/>
+<text x="208.17" y="884">262</text>
+<rect x="650" y="872" width="5.98" height="14" fill="#a05019"/>
+<text x="660.98" y="884">494</text>
+<text x="12" y="906">43 tennis racket</text>
+<rect x="190" y="894" width="16.33" height="14" fill="#136e9a"/>
+<text x="211.33" y="906">325</text>
+<rect x="650" y="894" width="5.48" height="14" fill="#a05019"/>
+<text x="660.48" y="906">453</text>
+<text x="12" y="928">44 bottle</text>
+<rect x="190" y="916" width="87.86" height="14" fill="#136e9a"/>
+<text x="282.86" y="928">1748</text>
+<rect x="650" y="916" width="63.54" height="14" fill="#a05019"/>
+<text x="718.54" y="928">5252</text>
+<text x="12" y="950">46 wine glass</text>
+<rect x="190" y="938" width="30.06" height="14" fill="#136e9a"/>
+<text x="225.06" y="950">598</text>
+<rect x="650" y="938" width="22.79" height="14" fill="#a05019"/>
+<text x="677.79" y="950">1884</text>
+<text x="12" y="972">47 cup</text>
+<rect x="190" y="960" width="96.80" height="14" fill="#136e9a"/>
+<text x="291.80" y="972">1926</text>
+<rect x="650" y="960" width="55.65" height="14" fill="#a05019"/>
+<text x="710.65" y="972">4600</text>
+<text x="12" y="994">48 fork</text>
+<rect x="190" y="982" width="41.72" height="14" fill="#136e9a"/>
+<text x="236.72" y="994">830</text>
+<rect x="650" y="982" width="15.63" height="14" fill="#a05019"/>
+<text x="670.63" y="994">1292</text>
+<text x="12" y="1016">49 knife</text>
+<rect x="190" y="1004" width="49.05" height="14" fill="#136e9a"/>
+<text x="244.05" y="1016">976</text>
+<rect x="650" y="1004" width="23.86" height="14" fill="#a05019"/>
+<text x="678.86" y="1016">1972</text>
+<text x="12" y="1038">50 spoon</text>
+<rect x="190" y="1026" width="42.62" height="14" fill="#136e9a"/>
+<text x="237.62" y="1038">848</text>
+<rect x="650" y="1026" width="19.37" height="14" fill="#a05019"/>
+<text x="674.37" y="1038">1601</text>
+<text x="12" y="1060">51 bowl</text>
+<rect x="190" y="1048" width="79.92" height="14" fill="#136e9a"/>
+<text x="274.92" y="1060">1590</text>
+<rect x="650" y="1048" width="39.70" height="14" fill="#a05019"/>
+<text x="694.70" y="1060">3282</text>
+<text x="12" y="1082">52 banana</text>
+<rect x="190" y="1070" width="21.71" height="14" fill="#136e9a"/>
+<text x="216.71" y="1082">432</text>
+<rect x="650" y="1070" width="19.51" height="14" fill="#a05019"/>
+<text x="674.51" y="1082">1613</text>
+<text x="12" y="1104">53 apple</text>
+<rect x="190" y="1092" width="21.91" height="14" fill="#136e9a"/>
+<text x="216.91" y="1104">436</text>
+<rect x="650" y="1092" width="17.90" height="14" fill="#a05019"/>
+<text x="672.90" y="1104">1480</text>
+<text x="12" y="1126">54 sandwich</text>
+<rect x="190" y="1114" width="24.83" height="14" fill="#136e9a"/>
+<text x="219.83" y="1126">494</text>
+<rect x="650" y="1114" width="12.35" height="14" fill="#a05019"/>
+<text x="667.35" y="1126">1021</text>
+<text x="12" y="1148">55 orange</text>
+<rect x="190" y="1136" width="21.71" height="14" fill="#136e9a"/>
+<text x="216.71" y="1148">432</text>
+<rect x="650" y="1136" width="16.95" height="14" fill="#a05019"/>
+<text x="671.95" y="1148">1401</text>
+<text x="12" y="1170">56 broccoli</text>
+<rect x="190" y="1158" width="19.45" height="14" fill="#136e9a"/>
+<text x="214.45" y="1170">387</text>
+<rect x="650" y="1158" width="16.32" height="14" fill="#a05019"/>
+<text x="671.32" y="1170">1349</text>
+<text x="12" y="1192">57 carrot</text>
+<rect x="190" y="1180" width="20.56" height="14" fill="#136e9a"/>
+<text x="215.56" y="1192">409</text>
+<rect x="650" y="1180" width="21.51" height="14" fill="#a05019"/>
+<text x="676.51" y="1192">1778</text>
+<text x="12" y="1214">58 hot dog</text>
+<rect x="190" y="1202" width="13.07" height="14" fill="#136e9a"/>
+<text x="208.07" y="1214">260</text>
+<rect x="650" y="1202" width="7.21" height="14" fill="#a05019"/>
+<text x="662.21" y="1214">596</text>
+<text x="12" y="1236">59 pizza</text>
+<rect x="190" y="1224" width="23.77" height="14" fill="#136e9a"/>
+<text x="218.77" y="1236">473</text>
+<rect x="650" y="1224" width="11.88" height="14" fill="#a05019"/>
+<text x="666.88" y="1236">982</text>
+<text x="12" y="1258">60 donut</text>
+<rect x="190" y="1246" width="14.88" height="14" fill="#136e9a"/>
+<text x="209.88" y="1258">296</text>
+<rect x="650" y="1246" width="17.12" height="14" fill="#a05019"/>
+<text x="672.12" y="1258">1415</text>
+<text x="12" y="1280">61 cake</text>
+<rect x="190" y="1268" width="26.64" height="14" fill="#136e9a"/>
+<text x="221.64" y="1280">530</text>
+<rect x="650" y="1268" width="13.44" height="14" fill="#a05019"/>
+<text x="668.44" y="1280">1111</text>
+<text x="12" y="1302">62 chair</text>
+<rect x="190" y="1290" width="116.61" height="14" fill="#136e9a"/>
+<text x="311.61" y="1302">2320</text>
+<rect x="650" y="1290" width="81.61" height="14" fill="#a05019"/>
+<text x="736.61" y="1302">6746</text>
+<text x="12" y="1324">63 couch</text>
+<rect x="190" y="1312" width="40.76" height="14" fill="#136e9a"/>
+<text x="235.76" y="1324">811</text>
+<rect x="650" y="1312" width="12.79" height="14" fill="#a05019"/>
+<text x="667.79" y="1324">1057</text>
+<text x="12" y="1346">64 potted plant</text>
+<rect x="190" y="1334" width="41.31" height="14" fill="#136e9a"/>
+<text x="236.31" y="1346">822</text>
+<rect x="650" y="1334" width="18.01" height="14" fill="#a05019"/>
+<text x="673.01" y="1346">1489</text>
+<text x="12" y="1368">65 bed</text>
+<rect x="190" y="1356" width="23.47" height="14" fill="#136e9a"/>
+<text x="218.47" y="1368">467</text>
+<rect x="650" y="1356" width="6.58" height="14" fill="#a05019"/>
+<text x="661.58" y="1368">544</text>
+<text x="12" y="1390">67 dining table</text>
+<rect x="190" y="1378" width="115.45" height="14" fill="#136e9a"/>
+<text x="310.45" y="1390">2297</text>
+<rect x="650" y="1378" width="36.01" height="14" fill="#a05019"/>
+<text x="691.01" y="1390">2977</text>
+<text x="12" y="1412">70 toilet</text>
+<rect x="190" y="1400" width="19.20" height="14" fill="#136e9a"/>
+<text x="214.20" y="1412">382</text>
+<rect x="650" y="1400" width="5.54" height="14" fill="#a05019"/>
+<text x="660.54" y="1412">458</text>
+<text x="12" y="1434">72 tv</text>
+<rect x="190" y="1422" width="47.90" height="14" fill="#136e9a"/>
+<text x="242.90" y="1434">953</text>
+<rect x="650" y="1422" width="14.70" height="14" fill="#a05019"/>
+<text x="669.70" y="1434">1215</text>
+<text x="12" y="1456">73 laptop</text>
+<rect x="190" y="1444" width="35.03" height="14" fill="#136e9a"/>
+<text x="230.03" y="1456">697</text>
+<rect x="650" y="1444" width="11.61" height="14" fill="#a05019"/>
+<text x="666.61" y="1456">960</text>
+<text x="12" y="1478">74 mouse</text>
+<rect x="190" y="1466" width="25.58" height="14" fill="#136e9a"/>
+<text x="220.58" y="1478">509</text>
+<rect x="650" y="1466" width="7.29" height="14" fill="#a05019"/>
+<text x="662.29" y="1478">603</text>
+<text x="12" y="1500">75 remote</text>
+<rect x="190" y="1488" width="25.98" height="14" fill="#136e9a"/>
+<text x="220.98" y="1500">517</text>
+<rect x="650" y="1488" width="11.25" height="14" fill="#a05019"/>
+<text x="666.25" y="1500">930</text>
+<text x="12" y="1522">76 keyboard</text>
+<rect x="190" y="1510" width="27.14" height="14" fill="#136e9a"/>
+<text x="222.14" y="1522">540</text>
+<rect x="650" y="1510" width="8.99" height="14" fill="#a05019"/>
+<text x="663.99" y="1522">743</text>
+<text x="12" y="1544">77 cell phone</text>
+<rect x="190" y="1532" width="37.04" height="14" fill="#136e9a"/>
+<text x="232.04" y="1544">737</text>
+<rect x="650" y="1532" width="11.49" height="14" fill="#a05019"/>
+<text x="666.49" y="1544">950</text>
+<text x="12" y="1566">78 microwave</text>
+<rect x="190" y="1554" width="24.58" height="14" fill="#136e9a"/>
+<text x="219.58" y="1566">489</text>
+<rect x="650" y="1554" width="6.36" height="14" fill="#a05019"/>
+<text x="661.36" y="1566">526</text>
+<text x="12" y="1588">79 oven</text>
+<rect x="190" y="1576" width="37.55" height="14" fill="#136e9a"/>
+<text x="232.55" y="1588">747</text>
+<rect x="650" y="1576" width="10.33" height="14" fill="#a05019"/>
+<text x="665.33" y="1588">854</text>
+<text x="12" y="1610">80 toaster</text>
+<rect x="190" y="1598" width="9.85" height="14" fill="#136e9a"/>
+<text x="204.85" y="1610">196</text>
+<rect x="650" y="1598" width="2.47" height="14" fill="#a05019"/>
+<text x="657.47" y="1610">204</text>
+<text x="12" y="1632">81 sink</text>
+<rect x="190" y="1620" width="49.91" height="14" fill="#136e9a"/>
+<text x="244.91" y="1632">993</text>
+<rect x="650" y="1620" width="14.29" height="14" fill="#a05019"/>
+<text x="669.29" y="1632">1181</text>
+<text x="12" y="1654">82 refrigerator</text>
+<rect x="190" y="1642" width="31.87" height="14" fill="#136e9a"/>
+<text x="226.87" y="1654">634</text>
+<rect x="650" y="1642" width="8.23" height="14" fill="#a05019"/>
+<text x="663.23" y="1654">680</text>
+<text x="12" y="1676">84 book</text>
+<rect x="190" y="1664" width="54.73" height="14" fill="#136e9a"/>
+<text x="249.73" y="1676">1089</text>
+<rect x="650" y="1664" width="60.92" height="14" fill="#a05019"/>
+<text x="715.92" y="1676">5036</text>
+<text x="12" y="1698">85 clock</text>
+<rect x="190" y="1686" width="28.30" height="14" fill="#136e9a"/>
+<text x="223.30" y="1698">563</text>
+<rect x="650" y="1686" width="8.12" height="14" fill="#a05019"/>
+<text x="663.12" y="1698">671</text>
+<text x="12" y="1720">86 vase</text>
+<rect x="190" y="1708" width="31.36" height="14" fill="#136e9a"/>
+<text x="226.36" y="1720">624</text>
+<rect x="650" y="1708" width="13.59" height="14" fill="#a05019"/>
+<text x="668.59" y="1720">1123</text>
+<text x="12" y="1742">87 scissors</text>
+<rect x="190" y="1730" width="13.82" height="14" fill="#136e9a"/>
+<text x="208.82" y="1742">275</text>
+<rect x="650" y="1730" width="4.92" height="14" fill="#a05019"/>
+<text x="659.92" y="1742">407</text>
+<text x="12" y="1764">88 teddy bear</text>
+<rect x="190" y="1752" width="16.44" height="14" fill="#136e9a"/>
+<text x="211.44" y="1764">327</text>
+<rect x="650" y="1752" width="8.19" height="14" fill="#a05019"/>
+<text x="663.19" y="1764">677</text>
+<text x="12" y="1786">89 hair drier</text>
+<rect x="190" y="1774" width="9.50" height="14" fill="#136e9a"/>
+<text x="204.50" y="1786">189</text>
+<rect x="650" y="1774" width="2.40" height="14" fill="#a05019"/>
+<text x="657.40" y="1786">198</text>
+<text x="12" y="1808">90 toothbrush</text>
+<rect x="190" y="1796" width="12.62" height="14" fill="#136e9a"/>
+<text x="207.62" y="1808">251</text>
+<rect x="650" y="1796" width="5.94" height="14" fill="#a05019"/>
+<text x="660.94" y="1808">491</text>
+</g></svg>

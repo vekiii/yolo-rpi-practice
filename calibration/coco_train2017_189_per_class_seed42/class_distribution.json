@@ -1,0 +1,646 @@
+{
+  "selections_before_dedup": 15120,
+  "unique_images": 14283,
+  "classes": [
+    {
+      "category_id": 1,
+      "name": "person",
+      "candidate_images": 64115,
+      "sampled_images": 189,
+      "actual_images": 7660,
+      "valid_instances": 31825
+    },
+    {
+      "category_id": 2,
+      "name": "bicycle",
+      "candidate_images": 3252,
+      "sampled_images": 189,
+      "actual_images": 535,
+      "valid_instances": 1055
+    },
+    {
+      "category_id": 3,
+      "name": "car",
+      "candidate_images": 12251,
+      "sampled_images": 189,
+      "actual_images": 1558,
+      "valid_instances": 5664
+    },
+    {
+      "category_id": 4,
+      "name": "motorcycle",
+      "candidate_images": 3502,
+      "sampled_images": 189,
+      "actual_images": 383,
+      "valid_instances": 905
+    },
+    {
+      "category_id": 5,
+      "name": "airplane",
+      "candidate_images": 2986,
+      "sampled_images": 189,
+      "actual_images": 250,
+      "valid_instances": 504
+    },
+    {
+      "category_id": 6,
+      "name": "bus",
+      "candidate_images": 3952,
+      "sampled_images": 189,
+      "actual_images": 475,
+      "valid_instances": 732
+    },
+    {
+      "category_id": 7,
+      "name": "train",
+      "candidate_images": 3588,
+      "sampled_images": 189,
+      "actual_images": 309,
+      "valid_instances": 370
+    },
+    {
+      "category_id": 8,
+      "name": "truck",
+      "candidate_images": 6127,
+      "sampled_images": 189,
+      "actual_images": 770,
+      "valid_instances": 1205
+    },
+    {
+      "category_id": 9,
+      "name": "boat",
+      "candidate_images": 3025,
+      "sampled_images": 189,
+      "actual_images": 327,
+      "valid_instances": 991
+    },
+    {
+      "category_id": 10,
+      "name": "traffic light",
+      "candidate_images": 4139,
+      "sampled_images": 189,
+      "actual_images": 519,
+      "valid_instances": 1597
+    },
+    {
+      "category_id": 11,
+      "name": "fire hydrant",
+      "candidate_images": 1711,
+      "sampled_images": 189,
+      "actual_images": 265,
+      "valid_instances": 280
+    },
+    {
+      "category_id": 13,
+      "name": "stop sign",
+      "candidate_images": 1734,
+      "sampled_images": 189,
+      "actual_images": 274,
+      "valid_instances": 309
+    },
+    {
+      "category_id": 14,
+      "name": "parking meter",
+      "candidate_images": 705,
+      "sampled_images": 189,
+      "actual_images": 217,
+      "valid_instances": 425
+    },
+    {
+      "category_id": 15,
+      "name": "bench",
+      "candidate_images": 5570,
+      "sampled_images": 189,
+      "actual_images": 679,
+      "valid_instances": 1237
+    },
+    {
+      "category_id": 16,
+      "name": "bird",
+      "candidate_images": 3237,
+      "sampled_images": 189,
+      "actual_images": 350,
+      "valid_instances": 1181
+    },
+    {
+      "category_id": 17,
+      "name": "cat",
+      "candidate_images": 4114,
+      "sampled_images": 189,
+      "actual_images": 497,
+      "valid_instances": 573
+    },
+    {
+      "category_id": 18,
+      "name": "dog",
+      "candidate_images": 4385,
+      "sampled_images": 189,
+      "actual_images": 583,
+      "valid_instances": 715
+    },
+    {
+      "category_id": 19,
+      "name": "horse",
+      "candidate_images": 2941,
+      "sampled_images": 189,
+      "actual_images": 295,
+      "valid_instances": 644
+    },
+    {
+      "category_id": 20,
+      "name": "sheep",
+      "candidate_images": 1529,
+      "sampled_images": 189,
+      "actual_images": 233,
+      "valid_instances": 1338
+    },
+    {
+      "category_id": 21,
+      "name": "cow",
+      "candidate_images": 1968,
+      "sampled_images": 189,
+      "actual_images": 249,
+      "valid_instances": 930
+    },
+    {
+      "category_id": 22,
+      "name": "elephant",
+      "candidate_images": 2143,
+      "sampled_images": 189,
+      "actual_images": 221,
+      "valid_instances": 527
+    },
+    {
+      "category_id": 23,
+      "name": "bear",
+      "candidate_images": 960,
+      "sampled_images": 189,
+      "actual_images": 200,
+      "valid_instances": 268
+    },
+    {
+      "category_id": 24,
+      "name": "zebra",
+      "candidate_images": 1916,
+      "sampled_images": 189,
+      "actual_images": 232,
+      "valid_instances": 638
+    },
+    {
+      "category_id": 25,
+      "name": "giraffe",
+      "candidate_images": 2546,
+      "sampled_images": 189,
+      "actual_images": 241,
+      "valid_instances": 490
+    },
+    {
+      "category_id": 27,
+      "name": "backpack",
+      "candidate_images": 5528,
+      "sampled_images": 189,
+      "actual_images": 819,
+      "valid_instances": 1295
+    },
+    {
+      "category_id": 28,
+      "name": "umbrella",
+      "candidate_images": 3968,
+      "sampled_images": 189,
+      "actual_images": 493,
+      "valid_instances": 1308
+    },
+    {
+      "category_id": 31,
+      "name": "handbag",
+      "candidate_images": 6841,
+      "sampled_images": 189,
+      "actual_images": 1055,
+      "valid_instances": 1833
+    },
+    {
+      "category_id": 32,
+      "name": "tie",
+      "candidate_images": 3810,
+      "sampled_images": 189,
+      "actual_images": 463,
+      "valid_instances": 782
+    },
+    {
+      "category_id": 33,
+      "name": "suitcase",
+      "candidate_images": 2402,
+      "sampled_images": 189,
+      "actual_images": 372,
+      "valid_instances": 859
+    },
+    {
+      "category_id": 34,
+      "name": "frisbee",
+      "candidate_images": 2184,
+      "sampled_images": 189,
+      "actual_images": 243,
+      "valid_instances": 294
+    },
+    {
+      "category_id": 35,
+      "name": "skis",
+      "candidate_images": 3082,
+      "sampled_images": 189,
+      "actual_images": 272,
+      "valid_instances": 643
+    },
+    {
+      "category_id": 36,
+      "name": "snowboard",
+      "candidate_images": 1654,
+      "sampled_images": 189,
+      "actual_images": 243,
+      "valid_instances": 408
+    },
+    {
+      "category_id": 37,
+      "name": "sports ball",
+      "candidate_images": 4262,
+      "sampled_images": 189,
+      "actual_images": 544,
+      "valid_instances": 795
+    },
+    {
+      "category_id": 38,
+      "name": "kite",
+      "candidate_images": 2261,
+      "sampled_images": 189,
+      "actual_images": 237,
+      "valid_instances": 971
+    },
+    {
+      "category_id": 39,
+      "name": "baseball bat",
+      "candidate_images": 2506,
+      "sampled_images": 189,
+      "actual_images": 381,
+      "valid_instances": 501
+    },
+    {
+      "category_id": 40,
+      "name": "baseball glove",
+      "candidate_images": 2629,
+      "sampled_images": 189,
+      "actual_images": 398,
+      "valid_instances": 552
+    },
+    {
+      "category_id": 41,
+      "name": "skateboard",
+      "candidate_images": 3476,
+      "sampled_images": 189,
+      "actual_images": 296,
+      "valid_instances": 478
+    },
+    {
+      "category_id": 42,
+      "name": "surfboard",
+      "candidate_images": 3486,
+      "sampled_images": 189,
+      "actual_images": 262,
+      "valid_instances": 494
+    },
+    {
+      "category_id": 43,
+      "name": "tennis racket",
+      "candidate_images": 3394,
+      "sampled_images": 189,
+      "actual_images": 325,
+      "valid_instances": 453
+    },
+    {
+      "category_id": 44,
+      "name": "bottle",
+      "candidate_images": 8501,
+      "sampled_images": 189,
+      "actual_images": 1748,
+      "valid_instances": 5252
+    },
+    {
+      "category_id": 46,
+      "name": "wine glass",
+      "candidate_images": 2533,
+      "sampled_images": 189,
+      "actual_images": 598,
+      "valid_instances": 1884
+    },
+    {
+      "category_id": 47,
+      "name": "cup",
+      "candidate_images": 9189,
+      "sampled_images": 189,
+      "actual_images": 1926,
+      "valid_instances": 4600
+    },
+    {
+      "category_id": 48,
+      "name": "fork",
+      "candidate_images": 3555,
+      "sampled_images": 189,
+      "actual_images": 830,
+      "valid_instances": 1292
+    },
+    {
+      "category_id": 49,
+      "name": "knife",
+      "candidate_images": 4326,
+      "sampled_images": 189,
+      "actual_images": 976,
+      "valid_instances": 1972
+    },
+    {
+      "category_id": 50,
+      "name": "spoon",
+      "candidate_images": 3529,
+      "sampled_images": 189,
+      "actual_images": 848,
+      "valid_instances": 1601
+    },
+    {
+      "category_id": 51,
+      "name": "bowl",
+      "candidate_images": 7111,
+      "sampled_images": 189,
+      "actual_images": 1590,
+      "valid_instances": 3282
+    },
+    {
+      "category_id": 52,
+      "name": "banana",
+      "candidate_images": 2243,
+      "sampled_images": 189,
+      "actual_images": 432,
+      "valid_instances": 1613
+    },
+    {
+      "category_id": 53,
+      "name": "apple",
+      "candidate_images": 1586,
+      "sampled_images": 189,
+      "actual_images": 436,
+      "valid_instances": 1480
+    },
+    {
+      "category_id": 54,
+      "name": "sandwich",
+      "candidate_images": 2365,
+      "sampled_images": 189,
+      "actual_images": 494,
+      "valid_instances": 1021
+    },
+    {
+      "category_id": 55,
+      "name": "orange",
+      "candidate_images": 1699,
+      "sampled_images": 189,
+      "actual_images": 432,
+      "valid_instances": 1401
+    },
+    {
+      "category_id": 56,
+      "name": "broccoli",
+      "candidate_images": 1939,
+      "sampled_images": 189,
+      "actual_images": 387,
+      "valid_instances": 1349
+    },
+    {
+      "category_id": 57,
+      "name": "carrot",
+      "candidate_images": 1683,
+      "sampled_images": 189,
+      "actual_images": 409,
+      "valid_instances": 1778
+    },
+    {
+      "category_id": 58,
+      "name": "hot dog",
+      "candidate_images": 1222,
+      "sampled_images": 189,
+      "actual_images": 260,
+      "valid_instances": 596
+    },
+    {
+      "category_id": 59,
+      "name": "pizza",
+      "candidate_images": 3166,
+      "sampled_images": 189,
+      "actual_images": 473,
+      "valid_instances": 982
+    },
+    {
+      "category_id": 60,
+      "name": "donut",
+      "candidate_images": 1523,
+      "sampled_images": 189,
+      "actual_images": 296,
+      "valid_instances": 1415
+    },
+    {
+      "category_id": 61,
+      "name": "cake",
+      "candidate_images": 2925,
+      "sampled_images": 189,
+      "actual_images": 530,
+      "valid_instances": 1111
+    },
+    {
+      "category_id": 62,
+      "name": "chair",
+      "candidate_images": 12774,
+      "sampled_images": 189,
+      "actual_images": 2320,
+      "valid_instances": 6746
+    },
+    {
+      "category_id": 63,
+      "name": "couch",
+      "candidate_images": 4423,
+      "sampled_images": 189,
+      "actual_images": 811,
+      "valid_instances": 1057
+    },
+    {
+      "category_id": 64,
+      "name": "potted plant",
+      "candidate_images": 4452,
+      "sampled_images": 189,
+      "actual_images": 822,
+      "valid_instances": 1489
+    },
+    {
+      "category_id": 65,
+      "name": "bed",
+      "candidate_images": 3682,
+      "sampled_images": 189,
+      "actual_images": 467,
+      "valid_instances": 544
+    },
+    {
+      "category_id": 67,
+      "name": "dining table",
+      "candidate_images": 11837,
+      "sampled_images": 189,
+      "actual_images": 2297,
+      "valid_instances": 2977
+    },
+    {
+      "category_id": 70,
+      "name": "toilet",
+      "candidate_images": 3353,
+      "sampled_images": 189,
+      "actual_images": 382,
+      "valid_instances": 458
+    },
+    {
+      "category_id": 72,
+      "name": "tv",
+      "candidate_images": 4561,
+      "sampled_images": 189,
+      "actual_images": 953,
+      "valid_instances": 1215
+    },
+    {
+      "category_id": 73,
+      "name": "laptop",
+      "candidate_images": 3524,
+      "sampled_images": 189,
+      "actual_images": 697,
+      "valid_instances": 960
+    },
+    {
+      "category_id": 74,
+      "name": "mouse",
+      "candidate_images": 1876,
+      "sampled_images": 189,
+      "actual_images": 509,
+      "valid_instances": 603
+    },
+    {
+      "category_id": 75,
+      "name": "remote",
+      "candidate_images": 3076,
+      "sampled_images": 189,
+      "actual_images": 517,
+      "valid_instances": 930
+    },
+    {
+      "category_id": 76,
+      "name": "keyboard",
+      "candidate_images": 2115,
+      "sampled_images": 189,
+      "actual_images": 540,
+      "valid_instances": 743
+    },
+    {
+      "category_id": 77,
+      "name": "cell phone",
+      "candidate_images": 4803,
+      "sampled_images": 189,
+      "actual_images": 737,
+      "valid_instances": 950
+    },
+    {
+      "category_id": 78,
+      "name": "microwave",
+      "candidate_images": 1547,
+      "sampled_images": 189,
+      "actual_images": 489,
+      "valid_instances": 526
+    },
+    {
+      "category_id": 79,
+      "name": "oven",
+      "candidate_images": 2877,
+      "sampled_images": 189,
+      "actual_images": 747,
+      "valid_instances": 854
+    },
+    {
+      "category_id": 80,
+      "name": "toaster",
+      "candidate_images": 217,
+      "sampled_images": 189,
+      "actual_images": 196,
+      "valid_instances": 204
+    },
+    {
+      "category_id": 81,
+      "name": "sink",
+      "candidate_images": 4678,
+      "sampled_images": 189,
+      "actual_images": 993,
+      "valid_instances": 1181
+    },
+    {
+      "category_id": 82,
+      "name": "refrigerator",
+      "candidate_images": 2360,
+      "sampled_images": 189,
+      "actual_images": 634,
+      "valid_instances": 680
+    },
+    {
+      "category_id": 84,
+      "name": "book",
+      "candidate_images": 5332,
+      "sampled_images": 189,
+      "actual_images": 1089,
+      "valid_instances": 5036
+    },
+    {
+      "category_id": 85,
+      "name": "clock",
+      "candidate_images": 4659,
+      "sampled_images": 189,
+      "actual_images": 563,
+      "valid_instances": 671
+    },
+    {
+      "category_id": 86,
+      "name": "vase",
+      "candidate_images": 3593,
+      "sampled_images": 189,
+      "actual_images": 624,
+      "valid_instances": 1123
+    },
+    {
+      "category_id": 87,
+      "name": "scissors",
+      "candidate_images": 947,
+      "sampled_images": 189,
+      "actual_images": 275,
+      "valid_instances": 407
+    },
+    {
+      "category_id": 88,
+      "name": "teddy bear",
+      "candidate_images": 2140,
+      "sampled_images": 189,
+      "actual_images": 327,
+      "valid_instances": 677
+    },
+    {
+      "category_id": 89,
+      "name": "hair drier",
+      "candidate_images": 189,
+      "sampled_images": 189,
+      "actual_images": 189,
+      "valid_instances": 198
+    },
+    {
+      "category_id": 90,
+      "name": "toothbrush",
+      "candidate_images": 1007,
+      "sampled_images": 189,
+      "actual_images": 251,
+      "valid_instances": 491
+    }
+  ]
+}

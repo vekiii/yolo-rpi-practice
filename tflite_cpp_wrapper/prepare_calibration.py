@@ -107,7 +107,7 @@ def check_image(path, row):
     return digest
 
 
-def acquire(root, row, attempts, timeout):
+def acquire(root, row, attempts, timeout, local_sources=()):
     target = root / row["local_path"]
     if target.is_file():
         try:
@@ -115,6 +115,18 @@ def acquire(root, row, attempts, timeout):
         except (OSError, ValueError):
             pass
     temp = target.with_suffix(".jpg.part")
+    for directory, hashes in local_sources:
+        source = directory / row["file_name"]
+        expected_hash = row["sha256"] or hashes.get(row["file_name"])
+        try:
+            shutil.copyfile(source, temp)
+            digest = check_image(temp, dict(row, sha256=expected_hash))
+            temp.replace(target)
+            return digest
+        except (OSError, ValueError):
+            pass
+        finally:
+            temp.unlink(missing_ok=True)
     for attempt in range(1, attempts + 1):
         try:
             with urlopen(row["url"], timeout=timeout) as response, temp.open("wb") as stream:
@@ -130,11 +142,13 @@ def acquire(root, row, attempts, timeout):
             temp.unlink(missing_ok=True)
 
 
-def download(root, manifest, jobs, attempts, timeout):
+def download(root, manifest, jobs, attempts, timeout, *, local_sources=(), checkpoint=1):
     (root / "images").mkdir(exist_ok=True)
     failures = []
+    total = len(manifest["images"])
+    dirty = 0
     with ThreadPoolExecutor(max_workers=jobs) as pool:
-        pending = {pool.submit(acquire, root, row, attempts, timeout): row
+        pending = {pool.submit(acquire, root, row, attempts, timeout, local_sources): row
                    for row in manifest["images"]}
         for count, future in enumerate(as_completed(pending), 1):
             row = pending[future]
@@ -146,14 +160,20 @@ def download(root, manifest, jobs, attempts, timeout):
             else:
                 if row["sha256"] != digest:
                     row["sha256"] = digest
-                    save_manifest(root / "manifest.json", manifest)
-            if count % 25 == 0 or count == COUNT:
-                print(f"Checked {count}/{COUNT}, failures: {len(failures)}", flush=True)
+                    dirty += 1
+                    if dirty >= checkpoint:
+                        save_manifest(root / "manifest.json", manifest)
+                        dirty = 0
+            if count % 25 == 0 or count == total:
+                print(f"Checked {count}/{total}, failures: {len(failures)}", flush=True)
+    if dirty:
+        save_manifest(root / "manifest.json", manifest)
     if failures:
         raise ValueError(f"Incomplete calibration set: {len(failures)} download failures")
 
 
 def verify(root, manifest):
+    total = len(manifest["images"])
     groups = defaultdict(list)
     errors = []
     for row in manifest["images"]:
@@ -164,12 +184,12 @@ def verify(root, manifest):
         except (OSError, ValueError) as error:
             errors.append(f"{row['id']}: {error}")
     if errors:
-        raise ValueError(f"Verification failed for {len(errors)}/{COUNT} images. "
+        raise ValueError(f"Verification failed for {len(errors)}/{total} images. "
                          + " | ".join(errors[:5]))
     for digest, ids in groups.items():
         if len(ids) > 1:
             print(f"Identical content: {digest} IDs={ids}", flush=True)
-    print(f"Verified {COUNT} JPEGs with expected dimensions and hashes. "
+    print(f"Verified {total} JPEGs with expected dimensions and hashes. "
           f"Duplicate-content groups: {sum(len(ids) > 1 for ids in groups.values())}", flush=True)
 
 

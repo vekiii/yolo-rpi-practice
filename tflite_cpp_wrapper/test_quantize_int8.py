@@ -11,6 +11,16 @@ import quantize_int8 as quant
 
 
 class QuantizeInt8Tests(unittest.TestCase):
+    def test_input_pipeline_uses_actual_manifest_length(self):
+        records = [{"id": i, "local_path": str(i)} for i in range(501)]
+        storage = np.empty((len(records), 1), dtype=np.float32)
+        with patch.object(quant, "preprocess", side_effect=lambda path: [int(path.name)]):
+            quant.fill_inputs(records, Path("fixture"), storage)
+        inputs = quant.CalibrationInputs(storage, "input")
+        for _ in range(2):
+            self.assertEqual([int(row["input"][0]) for row in inputs], list(range(501)))
+        self.assertEqual(inputs.pass_counts, [501, 501])
+
     def test_cpp_rounding_letterbox_and_rgb_fp32(self):
         with tempfile.TemporaryDirectory() as directory:
             image = Path(directory) / "asymmetric.png"

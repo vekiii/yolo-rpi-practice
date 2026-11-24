@@ -5,6 +5,7 @@ from collections import Counter
 from importlib.metadata import version
 import json
 from pathlib import Path
+import shutil
 import tempfile
 
 import cv2
@@ -38,12 +39,13 @@ def preprocess(path):
 
 
 def fill_inputs(records, root, storage):
-    if len(records) != COUNT or len({row["id"] for row in records}) != COUNT or len(storage) != COUNT:
-        raise ValueError(f"Expected exactly {COUNT} distinct calibration entries and tensor slots")
+    count = len(records)
+    if not count or len({row["id"] for row in records}) != count or len(storage) != count:
+        raise ValueError("Expected one tensor slot per distinct calibration image")
     for index, row in enumerate(records):
         storage[index] = preprocess(root / row["local_path"])
         if (index + 1) % 100 == 0:
-            print(f"Prepared {index + 1}/{COUNT} calibration inputs", flush=True)
+            print(f"Prepared {index + 1}/{count} calibration inputs", flush=True)
 
 
 class CalibrationInputs:
@@ -62,7 +64,7 @@ class CalibrationInputs:
             yield {self.input_key: tensor}
             count = self.pass_counts[pass_index]
             if pass_index == 1 and count % 50 == 0:
-                print(f"Calibrated {count}/{COUNT}", flush=True)
+                print(f"Calibrated {count}/{len(self.storage)}", flush=True)
 
 
 def write_json(path, payload, **kwargs):
@@ -161,7 +163,8 @@ def calibrate_qsv(qt, dataset, threads, mode, aggregation):
     return profiler.get_model_qsvs()
 
 
-def run(output, reuse_qsv, threads, aggregation="ema"):
+def run(output, reuse_qsv, threads, aggregation="ema", manifest_path=ROOT / "manifest.json",
+        scratch_dir=None):
     from ai_edge_litert.interpreter import Interpreter
     from ai_edge_quantizer import calibrator, qtyping, quantizer, recipe
     from ai_edge_quantizer.utils import calibration_utils
@@ -169,15 +172,27 @@ def run(output, reuse_qsv, threads, aggregation="ema"):
     packages = {name: version(name) for name in VERSIONS}
     if packages != VERSIONS:
         raise ValueError(f"Unexpected installed versions: {packages}. Expected: {VERSIONS}")
-    manifest_path = ROOT / "manifest.json"
+    root = manifest_path.parent
     source_hash = sha256(SOURCE)
     contract = json.loads(SOURCE.with_suffix(".contract.json").read_text(encoding="utf-8"))
     if source_hash != contract["model_sha256"]:
         raise ValueError("FP32 model does not match the verified contract")
     manifest_hash = sha256(manifest_path)
-    manifest = load_manifest(read_images(TRAIN), read_images(VAL), sha256(TRAIN), ROOT, create=False)
-    verify(ROOT, manifest)
+    if manifest_path.name != "manifest.json":
+        raise ValueError("Expected a calibration manifest named manifest.json")
+    if manifest_path.resolve() == (ROOT / "manifest.json").resolve():
+        # Preserve the original manifest path in existing QSV provenance.
+        manifest_path = ROOT / "manifest.json"
+        root = ROOT
+        manifest = load_manifest(read_images(TRAIN), read_images(VAL), sha256(TRAIN), root, create=False)
+        per_class = False
+    else:
+        from prepare_calibration_per_class import load_plan
+
+        manifest, _ = load_plan(root)
+        per_class = True
     records = manifest["images"]
+    count = len(records)
 
     source = Interpreter(model_path=str(SOURCE), num_threads=threads)
     source_io = io_details(source)
@@ -204,30 +219,50 @@ def run(output, reuse_qsv, threads, aggregation="ema"):
         "recipe": "recipe.static_wi8_ai8() + NO_QUANTIZE for INPUT and OUTPUT",
         "mode": mode.name, "threads": threads, "signature": signature, "signature_input": input_key,
     }
-    if aggregation == "global_minmax":
+    if not per_class and aggregation == "global_minmax":
         ema_report = json.loads((OUTPUT / "inspection.json").read_text(encoding="utf-8"))
         if ema_report["provenance"] != provenance or ema_report["num_samples_calibrated"] != COUNT:
             raise ValueError("Calibration inputs or settings differ from the saved EMA experiment")
+    if aggregation == "global_minmax":
         provenance["qsv_aggregation"] = "global_minmax"
         provenance["qsv_update_function"] = "ai_edge_quantizer.utils.qsv_utils.min_max_update"
-    output.mkdir(parents=True, exist_ok=False)
+    if per_class:
+        reference_dir = OUTPUT if aggregation == "ema" else OUTPUT.with_name("tflite_int8_global_minmax")
+        reference = json.loads((reference_dir / "inspection.json").read_bytes())["provenance"]
+        data_keys = {"manifest", "manifest_sha256", "image_ids"}
+        if {k: v for k, v in reference.items() if k not in data_keys} != {
+                k: v for k, v in provenance.items() if k not in data_keys}:
+            raise ValueError("Quantization settings differ from the corresponding random-500 reference")
+        provenance["calibration_schema"] = manifest["schema_version"]
+        provenance["qsv_aggregation"] = aggregation
+        if aggregation == "ema":
+            provenance["ema_smoothing_factor"] = 0.95
     qsv_path = output / "calibration_qsv.json"
     if reuse_qsv:
         qsvs, saved = calibration_utils.load_calibration_results(str(reuse_qsv))
-        if saved.get("provenance") != provenance or saved.get("num_samples_calibrated") != COUNT or not qsvs:
+        if saved.get("provenance") != provenance or saved.get("num_samples_calibrated") != count or not qsvs:
             raise ValueError("Saved calibration belongs to a different source, manifest or configuration")
         metadata = saved
-    else:
+    verify(root, manifest)
+    if not reuse_qsv:
+        scratch_parent = scratch_dir or output.parent
+        scratch_parent.mkdir(parents=True, exist_ok=True)
+        required = count * int(np.prod(INPUT_SHAPE)) * np.dtype(np.float32).itemsize
+        if shutil.disk_usage(scratch_parent).free < required:
+            raise ValueError(f"Need at least {required / 2**30:.2f} GiB free at {scratch_parent}; "
+                             "use --scratch-dir on a volume with sufficient space")
+    output.mkdir(parents=True, exist_ok=False)
+    if not reuse_qsv:
         # The installed calibrator materializes list(dataset) to count its work,
         # then iterates again to invoke. The first pass holds views, not RAM copies.
-        with tempfile.TemporaryDirectory(prefix="calibration_inputs_", dir=output) as scratch:
+        with tempfile.TemporaryDirectory(prefix="calibration_inputs_", dir=scratch_dir or output) as scratch:
             storage = np.memmap(Path(scratch) / "inputs.dat", dtype=np.float32, mode="w+",
-                                shape=(COUNT, *INPUT_SHAPE))
-            fill_inputs(records, ROOT, storage)
+                                shape=(count, *INPUT_SHAPE))
+            fill_inputs(records, root, storage)
             storage.flush()
             inputs = CalibrationInputs(storage, input_key)
             qsvs = calibrate_qsv(qt, {signature: inputs}, threads, mode, aggregation)
-            if inputs.pass_counts != [COUNT, COUNT] or not qsvs:
+            if inputs.pass_counts != [count, count] or not qsvs:
                 raise RuntimeError(f"Unexpected calibration dataset consumption: {inputs.pass_counts}")
             metadata = dict(num_samples_calibrated=inputs.pass_counts[1], provenance=provenance)
             del inputs, storage
@@ -247,7 +282,7 @@ def run(output, reuse_qsv, threads, aggregation="ema"):
         interpreter = Interpreter(model_path=str(model), num_threads=threads)
         report["io"] = io_details(interpreter)
         interpreter.set_tensor(report["io"]["inputs"][0]["index"],
-                               preprocess(ROOT / records[0]["local_path"]))
+                               preprocess(root / records[0]["local_path"]))
         interpreter.invoke()
         returned = interpreter.get_tensor(report["io"]["outputs"][0]["index"])
         if not np.isfinite(returned).all():
@@ -265,11 +300,15 @@ def main(default_output=OUTPUT, aggregation="ema"):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=default_output, help="New directory; must not exist")
     parser.add_argument("--reuse-qsv", type=Path, help="Reuse a matching calibration_qsv.json")
+    parser.add_argument("--manifest", type=Path, default=ROOT / "manifest.json")
+    parser.add_argument("--scratch-dir", type=Path, help="Directory for temporary disk-backed tensors")
     parser.add_argument("--threads", type=int, default=16, help="Calibration and Python check threads")
     args = parser.parse_args()
     if args.threads < 1:
         parser.error("Expected a positive thread count")
-    run(args.output_dir, args.reuse_qsv, args.threads, aggregation)
+    if args.manifest.resolve() != (ROOT / "manifest.json").resolve() and args.output_dir == default_output:
+        parser.error("Use --output-dir to give the new manifest a separate output directory")
+    run(args.output_dir, args.reuse_qsv, args.threads, aggregation, args.manifest, args.scratch_dir)
 
 
 if __name__ == "__main__":
