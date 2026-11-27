@@ -9,10 +9,11 @@ Zapis testova u kojima jedna fiksirana slika prolazi ponovljeni preprocessing, i
 | Raspberry Pi 4, FP32 | `models/tflite_fp32/yolov8n_fp32.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 12,841,242 |
 | Raspberry Pi 4, FP16 težine | `models/tflite_fp16_weights/yolov8n_fp16_weights.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 6,529,518 |
 | Raspberry Pi 4, INT8 (EMA min–max, 0,95) | `models/tflite_int8/yolov8n_int8.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 3,483,792 |
+| Raspberry Pi 4, INT8 (EMA min–max, 0,95; 189 slika po klasi) | `models/tflite_int8_189_per_class_ema/yolov8n_int8.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 3,483,792 |
 | Raspberry Pi 4, INT8 (globalni min–max) | `models/tflite_int8_global_minmax/yolov8n_int8.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 3,481,104 |
 | Raspberry Pi 4, dinamički INT8 | `models/tflite_dynamic_int8/yolov8n_dynamic_int8.tflite` | `000000239274.jpg` (239274) | 1 (slika eksplicitna) | 50 | 5000 | 4 | XNNPACK | 3,470,736 |
 
-Svih pet prolaza koristi TFLite C++ Interpreter API 2.20.0, ulaz `[1,3,640,640]`, izlaz `[1,84,8400]`, normalizovane bbox koordinate i istu, eksplicitno izabranu sliku (`seed_used: null`).
+Svih šest prolaza koristi TFLite C++ Interpreter API 2.20.0, ulaz `[1,3,640,640]`, izlaz `[1,84,8400]`, normalizovane bbox koordinate i istu, eksplicitno izabranu sliku (`seed_used: null`).
 
 ## Vreme po fazi
 
@@ -32,6 +33,10 @@ Svaka ćelija prikazuje **mean / median / std / min / max**, u ms, iz 5000 pojed
 | RPi 4 INT8 (EMA 0,95) | Inference | 212.892130 | 212.783853 | 0.886190 | 211.779126 | 251.733493 |
 | RPi 4 INT8 (EMA 0,95) | Postprocess | 5.509734 | 5.503521 | 0.036840 | 5.482345 | 6.944142 |
 | RPi 4 INT8 (EMA 0,95) | Total | 227.043868 | 226.931026 | 0.900880 | 225.828917 | 265.900760 |
+| RPi 4 INT8 (EMA 0,95; 189 slika po klasi) | Preprocess | 8.570438 | 8.569610 | 0.108813 | 8.318357 | 10.599133 |
+| RPi 4 INT8 (EMA 0,95; 189 slika po klasi) | Inference | 213.746206 | 213.362372 | 5.208991 | 212.821126 | 322.557669 |
+| RPi 4 INT8 (EMA 0,95; 189 slika po klasi) | Postprocess | 5.518908 | 5.511624 | 0.059288 | 5.491666 | 7.681512 |
+| RPi 4 INT8 (EMA 0,95; 189 slika po klasi) | Total | 227.835664 | 227.445377 | 5.249228 | 226.831879 | 337.350340 |
 | RPi 4 INT8 (globalni min–max) | Preprocess | 8.529434 | 8.518598 | 0.088119 | 8.326334 | 10.001376 |
 | RPi 4 INT8 (globalni min–max) | Inference | 213.368764 | 213.259810 | 0.604115 | 212.399802 | 222.348144 |
 | RPi 4 INT8 (globalni min–max) | Postprocess | 5.520822 | 5.514551 | 0.048767 | 5.494033 | 7.505046 |
@@ -50,6 +55,8 @@ Za ovu sliku i ova dva pojedinačna prolaza, FP16 težina model imao je inferenc
 U odnosu na FP32, INT8 je u ovom prolazu imao **50,57% kraće prosečno vreme inference** i **48,92% kraće ukupno vreme** po ponavljanju. U benchmark JSON fajlovima polje `precision` dopunjeno je prema lokalnim modelima čije se putanje i veličine poklapaju sa zapisima. Sva tri modela imaju FP32 ulaz i izlaz, a zapis težina je FP32, FP16 ili INT8. Tipove INT8 tenzora detaljnije beleži [pregled grafa](../../models/tflite_int8/inspection.json).
 
 Globalni min–max je u ovom prolazu imao **0,48 ms (0,22%) dužu prosečnu inferencu** i **0,38 ms (0,17%) duže ukupno vreme** od EMA 0,95. Obe INT8 varijante imaju FP32 ulaz i izlaz.
+
+EMA INT8 sa novim kalibracionim skupom (189 slika po klasi) imao je **50,38% kraće prosečno vreme inference** i **48,75% kraće ukupno vreme** od FP32. U odnosu na EMA INT8 sa 500 slika imao je **0,85 ms (0,40%) dužu prosečnu inferencu** i **0,79 ms (0,35%) duže ukupno vreme**. Model ima isti broj bajtova kao raniji EMA model, ali različit SHA-256 (različite kalibracione skale). Veća standardna devijacija inference (5,21 ms) dolazi od 17 od 5000 merenja iznad 230 ms (najviše 322,56 ms); medijana (213,36 ms) je blizu srednje vrednosti. Uzrok tih skokova nije utvrđen.
 
 Dinamički INT8 imao je **12,08% kraće prosečno vreme inference** i **11,66% kraće ukupno vreme** od FP32 u ovim prolazima.
 
@@ -70,6 +77,7 @@ Dinamički INT8 je dostigao **61,97 MiB** maksimalnog RSS-a. Vrednost obuhvata c
 - FP16 težine: [rpi_bench_fp16_img239274_benchmark.json](../../results/single_image_5000/rpi_bench_fp16_img239274_benchmark.json), izmenjen 16.11.2026. 13:27:44.
 - INT8 EMA: [rpi_bench_int8_img239274_benchmark.json](../../results/single_image_5000/rpi_bench_int8_img239274_benchmark.json), izmenjen 21.11.2026. 13:13:14.
 - INT8 globalni min–max: [rpi_bench_int8_global_minmax_img239274_benchmark.json](../../results/single_image_5000/rpi_bench_int8_global_minmax_img239274_benchmark.json).
+- INT8 EMA, 189 slika po klasi: [rpi_bench_int8_189_per_class_ema_img239274_benchmark.json](../../results/single_image_5000/rpi_bench_int8_189_per_class_ema_img239274_benchmark.json), izmenjen 27.11.2026. 15:49:46.
 - Dinamički INT8: [rpi_bench_dynamic_int8_img239274_benchmark.json](../../results/single_image_5000/rpi_bench_dynamic_int8_img239274_benchmark.json).
 
 Svaki fajl ima 5000 uzoraka. Statistike za INT8 proverene su prema `per_iteration` podacima. Datumi su vremena poslednje izmene kopiranih JSON fajlova. Ovaj benchmark meri vreme obrade iste slike.
